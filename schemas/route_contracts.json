@@ -1,0 +1,57 @@
+{
+  "preservedStateKeys": [
+    "selectedUseCase",
+    "customerSegment",
+    "packageIntent",
+    "savedProofItems",
+    "ctaPath",
+    "scenarioStatement",
+    "selectedPlatform"
+  ],
+  "routeDecisionInputs": [
+    "page",
+    "selectedPlatform",
+    "customerSegment",
+    "packageIntent",
+    "governanceSensitivity",
+    "teamSizeBand"
+  ],
+  "ctaTargets": [
+    "demo-request",
+    "start-onboarding",
+    "book-consultation",
+    "support-escalation"
+  ],
+  "defaultRules": [
+    {
+      "ruleKey": "home_default_demo",
+      "page": "home",
+      "condition": {"packageIntent": "explore"},
+      "cta": "request-demo"
+    },
+    {
+      "ruleKey": "solutions_guided_setup",
+      "page": "chatgpt-solutions",
+      "condition": {"packageIntent": "guided-setup"},
+      "cta": "start-onboarding"
+    },
+    {
+      "ruleKey": "solutions_team_onboarding",
+      "page": "chatgpt-solutions",
+      "condition": {"packageIntent": "team-onboarding"},
+      "cta": "book-consultation"
+    },
+    {
+      "ruleKey": "high_governance_route",
+      "page": "*",
+      "condition": {"governanceSensitivity": "high"},
+      "cta": "book-consultation"
+    },
+    {
+      "ruleKey": "support_handoff",
+      "page": "*",
+      "condition": {"packageIntent": "support"},
+      "cta": "support-escalation"
+    }
+  ]
+}
