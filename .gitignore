@@ -1,0 +1,17 @@
+# Node / build
+node_modules/
+dist/
+coverage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local exports
+exports/
+tmp/

@@ -1,0 +1,13 @@
+{
+  "component": "guided-capability-map",
+  "status": "pared-down-launch-spec",
+  "surface": ["Home"],
+  "nodes": [
+    "individual setup",
+    "student workflow",
+    "small team onboarding",
+    "governance support"
+  ],
+  "futureNodes": ["Gemini lane", "Managed Secure Mode"],
+  "rule": "Future nodes remain unpublished at launch"
+}

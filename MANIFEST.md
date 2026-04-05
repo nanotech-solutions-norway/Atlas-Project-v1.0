@@ -1,0 +1,23 @@
+# First-File Manifest
+
+- docs/architecture_decisions.md
+- docs/page_map.md
+- docs/interaction_module_model.md
+- docs/source_review_register.md
+- schemas/atlas_cms_fields.json
+- schemas/published_record_policy.json
+- schemas/platform_deployment_enums.json
+- schemas/route_contracts.json
+- schemas/interaction_module_contract.json
+- cms-seeds/platforms.csv
+- cms-seeds/deployment-modes.csv
+- cms-seeds/customer-segments.csv
+- cms-seeds/offers-packages.csv
+- cms-seeds/cta-configs.csv
+- cms-seeds/support-routes.csv
+- cms-seeds/proof-assets.csv
+- cms-seeds/compliance-claims.csv
+- cms-seeds/faqs-approved-knowledge.csv
+- velo/site_module_map.md
+- qa/launch_checklist.md
+- future-azure/api_contract_placeholders.md

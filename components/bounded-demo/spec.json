@@ -1,0 +1,12 @@
+{
+  "component": "bounded-demo-surface",
+  "status": "launch-ready-spec",
+  "surface": ["Demo / Sandbox"],
+  "inputs": ["scenarioChoice", "userIntent"],
+  "outputs": ["boundedResponse", "nextBestAction"],
+  "guardrails": [
+    "No free-form open chat as the public default",
+    "No reusable sensitive recipe disclosure",
+    "Approved scenario content only"
+  ]
+}

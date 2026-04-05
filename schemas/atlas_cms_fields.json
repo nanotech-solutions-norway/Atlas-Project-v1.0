@@ -1,0 +1,96 @@
+{
+  "collections": [
+    {
+      "collectionId": "atlas-platforms",
+      "displayName": "Atlas Platforms",
+      "fields": [
+        {"key": "title", "type": "TEXT", "required": true},
+        {"key": "slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "type": "RICH_TEXT", "required": false},
+        {"key": "positioning", "type": "TEXT", "required": false},
+        {"key": "bestFitFor", "type": "ARRAY_STRING", "required": false},
+        {"key": "governancePosture", "type": "RICH_TEXT", "required": false},
+        {"key": "sortOrder", "type": "NUMBER", "required": false},
+        {"key": "isPublished", "type": "BOOLEAN", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-deployment-modes",
+      "displayName": "Atlas Deployment Modes",
+      "fields": [
+        {"key": "title", "type": "TEXT", "required": true},
+        {"key": "slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "type": "RICH_TEXT", "required": false},
+        {"key": "visibilityLabel", "type": "TEXT", "required": false},
+        {"key": "securityBoundary", "type": "TEXT", "required": false},
+        {"key": "sortOrder", "type": "NUMBER", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-customer-segments",
+      "displayName": "Atlas Customer Segments",
+      "fields": [
+        {"key": "title", "type": "TEXT", "required": true},
+        {"key": "slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "type": "RICH_TEXT", "required": false},
+        {"key": "typicalNeeds", "type": "ARRAY_STRING", "required": false},
+        {"key": "sortOrder", "type": "NUMBER", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-offers-packages",
+      "displayName": "Atlas Offers Packages",
+      "fields": [
+        {"key": "title", "type": "TEXT", "required": true},
+        {"key": "slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "type": "RICH_TEXT", "required": false},
+        {"key": "packageType", "type": "TEXT", "required": false},
+        {"key": "startingFrom", "type": "TEXT", "required": false},
+        {"key": "platformPrimary", "type": "REFERENCE", "ref": "atlas-platforms", "required": false},
+        {"key": "platforms", "type": "MULTI_REFERENCE", "ref": "atlas-platforms", "required": false},
+        {"key": "deploymentModes", "type": "MULTI_REFERENCE", "ref": "atlas-deployment-modes", "required": false},
+        {"key": "customerSegments", "type": "MULTI_REFERENCE", "ref": "atlas-customer-segments", "required": false},
+        {"key": "proofAssets", "type": "MULTI_REFERENCE", "ref": "atlas-proof-assets", "required": false},
+        {"key": "faqItems", "type": "MULTI_REFERENCE", "ref": "atlas-faqs-approved-knowledge", "required": false},
+        {"key": "complianceClaims", "type": "MULTI_REFERENCE", "ref": "atlas-compliance-claims", "required": false},
+        {"key": "primaryCTA", "type": "REFERENCE", "ref": "atlas-cta-configs", "required": false},
+        {"key": "sortOrder", "type": "NUMBER", "required": false},
+        {"key": "isFeatured", "type": "BOOLEAN", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-faqs-approved-knowledge",
+      "displayName": "Atlas FAQs Approved Knowledge",
+      "fields": [
+        {"key": "title", "type": "TEXT", "required": true},
+        {"key": "slug", "type": "TEXT", "required": false},
+        {"key": "answer", "type": "RICH_TEXT", "required": true},
+        {"key": "faqCategory", "type": "TEXT", "required": false},
+        {"key": "platforms", "type": "MULTI_REFERENCE", "ref": "atlas-platforms", "required": false},
+        {"key": "offers", "type": "MULTI_REFERENCE", "ref": "atlas-offers-packages", "required": false},
+        {"key": "segments", "type": "MULTI_REFERENCE", "ref": "atlas-customer-segments", "required": false},
+        {"key": "complianceClaims", "type": "MULTI_REFERENCE", "ref": "atlas-compliance-claims", "required": false},
+        {"key": "sortOrder", "type": "NUMBER", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-proof-assets",
+      "displayName": "Atlas Proof Assets",
+      "fields": [
+        {"key": "title", "type": "TEXT", "required": true},
+        {"key": "slug", "type": "TEXT", "required": false},
+        {"key": "assetType", "type": "TEXT", "required": false},
+        {"key": "summaryShort", "type": "TEXT", "required": false},
+        {"key": "description", "type": "RICH_TEXT", "required": false},
+        {"key": "proofLevel", "type": "TEXT", "required": false},
+        {"key": "sourceUrl", "type": "URL", "required": false},
+        {"key": "platforms", "type": "MULTI_REFERENCE", "ref": "atlas-platforms", "required": false},
+        {"key": "offers", "type": "MULTI_REFERENCE", "ref": "atlas-offers-packages", "required": false},
+        {"key": "complianceClaims", "type": "MULTI_REFERENCE", "ref": "atlas-compliance-claims", "required": false},
+        {"key": "sortOrder", "type": "NUMBER", "required": false}
+      ]
+    },{

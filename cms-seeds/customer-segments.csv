@@ -1,0 +1,6 @@
+title,slug,summaryShort,summaryLong,typicalNeeds,sortOrder
+Consumers,consumers,Individual buyers needing guided setup and practical AI usage.,"Lower-friction self-serve buyers who need clarity, safe use, and practical onboarding.",guided setup|practical usage|clear next steps,1
+Students,students,Study and research workflow support with guardrails.,Education-oriented buyers needing a bounded operating package and guidance.,research support|workflow guidance|guardrails,2
+Micro-SMB,micro-smb,Small teams needing structure without enterprise overhead.,"Small businesses needing practical onboarding, workflow fit, and support routes.",team setup|workflow structure|support,3
+SMB,smb,"Business deployment with onboarding, governance, and support.",Prepared for future platform lanes and richer deployment models.,onboarding|governance|rollout,4
+Enterprise,enterprise,Governance-first deployment and operating controls.,Reserved for later public lane expansion and managed secure delivery.,governance|auditability|secure delivery,5

@@ -1,0 +1,11 @@
+{
+  "name": "atlas-project-v1-governance-pack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Governed schemas, seeds, Velo skeletons, and module contracts for Atlas ChatGPT-first launch.",
+  "scripts": {
+    "validate:schemas": "node scripts/validate-schemas.mjs",
+    "validate:csv": "node scripts/validate-csv.mjs",
+    "validate": "npm run validate:schemas && npm run validate:csv"
+  }
+}

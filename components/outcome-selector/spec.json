@@ -1,0 +1,23 @@
+{
+  "component": "outcome-selector",
+  "status": "launch-ready-spec",
+  "surface": ["Home", "ChatGPT Solutions"],
+  "fields": [
+    "selectedUseCase",
+    "customerSegment",
+    "packageIntent",
+    "teamSizeBand",
+    "governanceSensitivity"
+  ],
+  "stateWrites": [
+    "selectedUseCase",
+    "customerSegment",
+    "packageIntent",
+    "teamSizeBand",
+    "governanceSensitivity"
+  ],
+  "routingDependencies": [
+    "atlas-routing-rules",
+    "atlas-cta-configs"
+  ]
+}

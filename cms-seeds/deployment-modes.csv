@@ -1,0 +1,3 @@
+title,slug,summaryShort,summaryLong,visibilityLabel,securityBoundary,sortOrder
+Native Platform Package,native-platform-package,Customer owns native platform access; Atlas provides configuration and onboarding.,Launch-safe delivery mode for the ChatGPT-first public offer.,Public launch mode,Wix shell plus customer-owned native platform access,1
+Managed Secure Mode,managed-secure-mode,Atlas-managed secure operating model with external runtime and controls.,Prepared structure only; keep unpublished until the secure stack exists.,Prepared future mode,External secure runtime and entitlement layer,2

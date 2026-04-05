@@ -1,0 +1,3 @@
+title,slug,routeType,contactEmail,contactUrl,responseSla,platforms,segments,active
+General Contact,general-contact,General,,,TBD,chatgpt,consumers|students|micro-smb,true
+Human Escalation,human-escalation,Human Escalation,,,TBD,chatgpt,micro-smb|smb|enterprise,true

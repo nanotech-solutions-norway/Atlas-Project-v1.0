@@ -1,0 +1,16 @@
+{
+  "component": "proof-stack-strip",
+  "status": "launch-ready-spec",
+  "surface": ["Home", "ChatGPT Solutions", "Proof / Trust / Compliance"],
+  "fields": [
+    "title",
+    "summaryShort",
+    "proofLevel",
+    "complianceClaims"
+  ],
+  "contentRules": [
+    "No unsupported security overclaims",
+    "No future-mode implication without disclosure",
+    "Always tie proof to governed claims"
+  ]
+}

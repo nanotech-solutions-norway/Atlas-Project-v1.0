@@ -1,0 +1,18 @@
+{
+  "component": "fit-cards",
+  "status": "launch-ready-spec",
+  "surface": ["ChatGPT Solutions", "Pricing / Packages"],
+  "fields": [
+    "title",
+    "summaryShort",
+    "packageType",
+    "startingFrom",
+    "proofAssets",
+    "primaryCTA"
+  ],
+  "interactionRules": [
+    "Cards can expand for operational detail",
+    "Proof links open near the decision point",
+    "CTA label comes from atlas-cta-configs"
+  ]
+}

@@ -1,0 +1,5 @@
+title,slug,label,targetType,targetUrl,targetPageName,platforms,offers,segments,deploymentModes,supportRoute
+Request Demo,request-demo,Request Demo,Page,,Demo / Sandbox,chatgpt,,consumers|students|micro-smb,native-platform-package,general-contact
+Start Onboarding,start-onboarding,Start Onboarding,Page,,Contact / Onboarding,chatgpt,atlas-chatgpt-guided-setup,consumers|students|micro-smb,native-platform-package,general-contact
+Book Consultation,book-consultation,Book Consultation,Page,,Contact / Onboarding,chatgpt,atlas-team-onboarding|atlas-governance-support,micro-smb|smb|enterprise,native-platform-package|managed-secure-mode,human-escalation
+Support Escalation,support-escalation,Talk to Support,Page,,Contact / Onboarding,chatgpt,,consumers|students|micro-smb|smb|enterprise,native-platform-package|managed-secure-mode,human-escalation

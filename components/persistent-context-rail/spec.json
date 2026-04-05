@@ -1,0 +1,17 @@
+{
+  "component": "persistent-context-rail",
+  "status": "launch-ready-spec",
+  "surface": ["global"],
+  "fields": [
+    "selectedUseCase",
+    "customerSegment",
+    "savedProofItems",
+    "ctaPath",
+    "scenarioStatement"
+  ],
+  "rules": [
+    "Always editable",
+    "No sensitive secure-mode data",
+    "CTA must resolve from governed routing"
+  ]
+}
