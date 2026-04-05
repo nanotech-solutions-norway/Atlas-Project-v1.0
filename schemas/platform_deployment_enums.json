@@ -1,0 +1,19 @@
+{
+  "platforms": [
+    {"slug": "chatgpt", "title": "ChatGPT", "status": "public-launch"},
+    {"slug": "microsoft-copilot", "title": "Microsoft Copilot", "status": "future-structured"},
+    {"slug": "gemini", "title": "Gemini", "status": "prepared-not-public"}
+  ],
+  "deploymentModes": [
+    {"slug": "native-platform-package", "title": "Native Platform Package", "status": "public-launch"},
+    {"slug": "managed-secure-mode", "title": "Managed Secure Mode", "status": "prepared-not-public"}
+  ],
+  "packageTypes": [
+    "Guided Setup",
+    "Team Onboarding",
+    "Governance Support",
+    "Support / Optimization",
+    "Managed Secure Mode Placeholder"
+  ],
+  "segments": ["consumers", "students", "micro-smb", "smb", "enterprise"]
+}
