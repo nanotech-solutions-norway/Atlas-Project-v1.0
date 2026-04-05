@@ -1,0 +1,77 @@
+{
+  "collections": [
+    {
+      "collectionId": "atlas-platforms",
+      "displayName": "Atlas Platforms",
+      "permissions": {"read": "ANYONE", "insert": "ADMIN", "update": "ADMIN", "remove": "ADMIN"},
+      "priority": "Core",
+      "fields": [
+        {"key": "title", "displayName": "Title", "type": "TEXT", "required": true},
+        {"key": "slug", "displayName": "Slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "displayName": "Summary Short", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "displayName": "Summary Long", "type": "RICH_TEXT", "required": false},
+        {"key": "positioning", "displayName": "Positioning", "type": "TEXT", "required": false},
+        {"key": "bestFitFor", "displayName": "Best Fit For", "type": "ARRAY_STRING", "required": false},
+        {"key": "governancePosture", "displayName": "Governance Posture", "type": "RICH_TEXT", "required": false},
+        {"key": "logo", "displayName": "Logo", "type": "IMAGE", "required": false},
+        {"key": "heroImage", "displayName": "Hero Image", "type": "IMAGE", "required": false},
+        {"key": "sortOrder", "displayName": "Sort Order", "type": "NUMBER", "required": false},
+        {"key": "isPublished", "displayName": "Is Published", "type": "BOOLEAN", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-deployment-modes",
+      "displayName": "Atlas Deployment Modes",
+      "permissions": {"read": "ANYONE", "insert": "ADMIN", "update": "ADMIN", "remove": "ADMIN"},
+      "priority": "Core",
+      "fields": [
+        {"key": "title", "displayName": "Title", "type": "TEXT", "required": true},
+        {"key": "slug", "displayName": "Slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "displayName": "Summary Short", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "displayName": "Summary Long", "type": "RICH_TEXT", "required": false},
+        {"key": "visibilityLabel", "displayName": "Visibility Label", "type": "TEXT", "required": false},
+        {"key": "securityBoundary", "displayName": "Security Boundary", "type": "TEXT", "required": false},
+        {"key": "sortOrder", "displayName": "Sort Order", "type": "NUMBER", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-customer-segments",
+      "displayName": "Atlas Customer Segments",
+      "permissions": {"read": "ANYONE", "insert": "ADMIN", "update": "ADMIN", "remove": "ADMIN"},
+      "priority": "Core",
+      "fields": [
+        {"key": "title", "displayName": "Title", "type": "TEXT", "required": true},
+        {"key": "slug", "displayName": "Slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "displayName": "Summary Short", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "displayName": "Summary Long", "type": "RICH_TEXT", "required": false},
+        {"key": "typicalNeeds", "displayName": "Typical Needs", "type": "ARRAY_STRING", "required": false},
+        {"key": "sortOrder", "displayName": "Sort Order", "type": "NUMBER", "required": false}
+      ]
+    },
+    {
+      "collectionId": "atlas-offers-packages",
+      "displayName": "Atlas Offers Packages",
+      "permissions": {"read": "ANYONE", "insert": "ADMIN", "update": "ADMIN", "remove": "ADMIN"},
+      "priority": "Core",
+      "fields": [
+        {"key": "title", "displayName": "Title", "type": "TEXT", "required": true},
+        {"key": "slug", "displayName": "Slug", "type": "TEXT", "required": true},
+        {"key": "summaryShort", "displayName": "Summary Short", "type": "TEXT", "required": false},
+        {"key": "summaryLong", "displayName": "Summary Long", "type": "RICH_TEXT", "required": false},
+        {"key": "packageType", "displayName": "Package Type", "type": "TEXT", "required": false},
+        {"key": "startingFrom", "displayName": "Starting From", "type": "TEXT", "required": false},
+        {"key": "platformPrimary", "displayName": "Primary Platform", "type": "REFERENCE", "required": false, "referenceTarget": "atlas-platforms"},
+        {"key": "platforms", "displayName": "Platforms", "type": "MULTI_REFERENCE", "required": false, "referenceTarget": "atlas-platforms"},
+        {"key": "deploymentModes", "displayName": "Deployment Modes", "type": "MULTI_REFERENCE", "required": false, "referenceTarget": "atlas-deployment-modes"},
+        {"key": "customerSegments", "displayName": "Customer Segments", "type": "MULTI_REFERENCE", "required": false, "referenceTarget": "atlas-customer-segments"},
+        {"key": "proofAssets", "displayName": "Proof Assets", "type": "MULTI_REFERENCE", "required": false, "referenceTarget": "atlas-proof-assets"},
+        {"key": "faqItems", "displayName": "FAQ Items", "type": "MULTI_REFERENCE", "required": false, "referenceTarget": "atlas-faqs-approved-knowledge"},
+        {"key": "complianceClaims", "displayName": "Compliance Claims", "type": "MULTI_REFERENCE", "required": false, "referenceTarget": "atlas-compliance-claims"},
+        {"key": "primaryCTA", "displayName": "Primary CTA", "type": "REFERENCE", "required": false, "referenceTarget": "atlas-cta-configs"},
+        {"key": "sortOrder", "displayName": "Sort Order", "type": "NUMBER", "required": false},
+        {"key": "isFeatured", "displayName": "Is Featured", "type": "BOOLEAN", "required": false}
+      ]
+    }
+  ],
+  "note": "Repair copy created because the original atlas_cms_fields.json landed truncated during connector bulk import. Use this repaired version as the canonical schema until the original path is replaced."
+}
