@@ -1,0 +1,21 @@
+{
+  "journeyStages": ["Orient", "Explain", "Fit", "Prove", "Act"],
+  "phase1Modules": [
+    "persistent-context-rail",
+    "outcome-selector",
+    "proof-stack-strip",
+    "guided-capability-map",
+    "fit-cards",
+    "context-aware-cta-routing",
+    "structured-multi-path-forms",
+    "knowledge-explanation-modules"
+  ],
+  "deferredModules": [
+    "full-ai-assistant",
+    "environment-map",
+    "roi-calculator",
+    "role-aware-stakeholder-mode",
+    "managed-secure-workspace-surfaces",
+    "cross-platform-public-routing"
+  ]
+}
