@@ -1,0 +1,35 @@
+{
+  "publicLaunch": {
+    "platformsPublished": ["chatgpt"],
+    "deploymentModesPublished": ["native-platform-package"],
+    "pagesPublished": [
+      "home",
+      "chatgpt-solutions",
+      "how-it-works",
+      "atlas-knowledge",
+      "proof-trust-compliance",
+      "pricing-packages",
+      "faq",
+      "demo-sandbox",
+      "contact-onboarding"
+    ]
+  },
+  "preparedButNotPublic": {
+    "platformsReserved": ["gemini"],
+    "deploymentModesReserved": ["managed-secure-mode"],
+    "structuresReserved": [
+      "hidden Gemini templates",
+      "hidden secure-mode templates",
+      "prompt-context structures",
+      "route rules for future secure-mode activation",
+      "Azure contract placeholders"
+    ]
+  },
+  "rules": [
+    "Do not surface Gemini in public top navigation at launch",
+    "Do not surface Managed Secure Mode as a live offer until runtime exists",
+    "Do not publish unsupported compliance claims",
+    "Do not hard-code ChatGPT into structural schemas where platform abstraction is required",
+    "Keep platform and deployment mode as first-class objects even when hidden from public navigation"
+  ]
+}
