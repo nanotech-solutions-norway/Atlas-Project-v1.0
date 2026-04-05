@@ -1,0 +1,43 @@
+import { ok, badRequest } from 'wix-http-functions';
+
+export async function get_atlasRoute(request) {
+  try {
+    const { packageIntent = '', governanceSensitivity = '', customerSegment = '' } = request.query || {};
+
+    let cta = {
+      slug: 'request-demo',
+      label: 'Request Demo',
+      targetPage: 'Demo / Sandbox'
+    };
+
+    if (governanceSensitivity === 'high') {
+      cta = {
+        slug: 'book-consultation',
+        label: 'Book Consultation',
+        targetPage: 'Contact / Onboarding'
+      };
+    } else if (packageIntent === 'guided-setup') {
+      cta = {
+        slug: 'start-onboarding',
+        label: 'Start Onboarding',
+        targetPage: 'Contact / Onboarding'
+      };
+    } else if (packageIntent === 'team-onboarding' || customerSegment === 'smb') {
+      cta = {
+        slug: 'book-consultation',
+        label: 'Book Consultation',
+        targetPage: 'Contact / Onboarding'
+      };
+    }
+
+    return ok({
+      headers: { 'Content-Type': 'application/json' },
+      body: { status: 'ok', cta }
+    });
+  } catch (error) {
+    return badRequest({
+      headers: { 'Content-Type': 'application/json' },
+      body: { status: 'error', message: error.message }
+    });
+  }
+}
