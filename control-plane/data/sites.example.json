@@ -1,0 +1,160 @@
+{
+  "sites": [
+    {
+      "id": "atlas",
+      "name": "Atlas",
+      "url": "https://www.ainorge.com",
+      "repo": "nanotech-solutions-norway/Atlas-Project-v1.0",
+      "platform": "GitHub + Wix/Azure operating model",
+      "priority": "High",
+      "status": "Build",
+      "owner": "Commercial + Delivery",
+      "metrics": {
+        "sessions": 3820,
+        "engagedSessions": 2395,
+        "conversions": 44,
+        "organicClicks": 512,
+        "impressions": 22890,
+        "ctr": 2.24,
+        "position": 19.4,
+        "cwvPass": 78,
+        "indexedPages": 36
+      },
+      "trafficTrend": [280, 310, 295, 340, 360, 392, 410],
+      "organicTrend": [52, 60, 71, 79, 88, 77, 85],
+      "topQueries": [
+        { "query": "ai norway consulting", "clicks": 61, "ctr": 3.8, "position": 8.9 },
+        { "query": "chatgpt business norway", "clicks": 42, "ctr": 2.2, "position": 14.1 },
+        { "query": "ai enablement norway", "clicks": 29, "ctr": 1.7, "position": 16.3 }
+      ],
+      "issues": [
+        { "severity": "High", "title": "Clarify primary CTA routing by audience lane", "owner": "Growth" },
+        { "severity": "Medium", "title": "Expand proof assets for governance and compliance pages", "owner": "Content" },
+        { "severity": "Low", "title": "Refine metadata coverage for knowledge pages", "owner": "SEO" }
+      ],
+      "connectors": ["GitHub", "Google Drive", "Gmail", "Google Calendar", "Gamma"]
+    },
+    {
+      "id": "ntsn",
+      "name": "NanoTech Solutions Norway",
+      "url": "https://www.nanotech-solutions.com",
+      "repo": "nanotech-solutions-norway/NTSN-v2.1",
+      "platform": "GitHub / Static / CMS-adjacent",
+      "priority": "High",
+      "status": "Active",
+      "owner": "Commercial + Technical",
+      "metrics": {
+        "sessions": 11840,
+        "engagedSessions": 8220,
+        "conversions": 97,
+        "organicClicks": 1548,
+        "impressions": 61420,
+        "ctr": 2.52,
+        "position": 14.8,
+        "cwvPass": 71,
+        "indexedPages": 118
+      },
+      "trafficTrend": [970, 1020, 995, 1085, 1122, 1198, 1244],
+      "organicTrend": [160, 172, 185, 191, 207, 221, 230],
+      "topQueries": [
+        { "query": "anti ice nanocoating", "clicks": 126, "ctr": 3.4, "position": 9.2 },
+        { "query": "superhydrophobic coating norway", "clicks": 88, "ctr": 2.9, "position": 11.0 },
+        { "query": "antimicrobial nanocoating", "clicks": 73, "ctr": 2.5, "position": 12.8 }
+      ],
+      "issues": [
+        { "severity": "High", "title": "Consolidate overlapping product and solution route intent", "owner": "SEO" },
+        { "severity": "Medium", "title": "Increase internal linking from Nano concepts to Tech pages", "owner": "Content" },
+        { "severity": "Medium", "title": "Tighten structured metadata for category pages", "owner": "Technical SEO" }
+      ],
+      "connectors": ["GitHub", "Google Drive", "Gamma"]
+    },
+    {
+      "id": "solarex",
+      "name": "SolarEX",
+      "url": "https://www.solarex.no/v21/",
+      "repo": "nanotech-solutions-norway/SolarEX-2.0",
+      "platform": "GitHub Pages",
+      "priority": "Medium",
+      "status": "Active",
+      "owner": "Solar team",
+      "metrics": {
+        "sessions": 4930,
+        "engagedSessions": 3310,
+        "conversions": 28,
+        "organicClicks": 601,
+        "impressions": 27100,
+        "ctr": 2.22,
+        "position": 17.2,
+        "cwvPass": 82,
+        "indexedPages": 41
+      },
+      "trafficTrend": [330, 350, 372, 388, 404, 421, 440],
+      "organicTrend": [61, 64, 72, 74, 81, 89, 93],
+      "topQueries": [
+        { "query": "solar panel nanocoating", "clicks": 72, "ctr": 3.1, "position": 10.4 },
+        { "query": "hydrophobic solar coating", "clicks": 64, "ctr": 2.6, "position": 12.7 },
+        { "query": "self cleaning solar coating", "clicks": 58, "ctr": 2.1, "position": 13.9 }
+      ],
+      "issues": [
+        { "severity": "Medium", "title": "Strengthen case-study proof stack around ROI pages", "owner": "Content" },
+        { "severity": "Medium", "title": "Reduce route inconsistency between product and application pages", "owner": "UX" },
+        { "severity": "Low", "title": "Refresh hero CTA language for pilot inquiries", "owner": "Growth" }
+      ],
+      "connectors": ["GitHub", "Google Drive"]
+    },
+    {
+      "id": "siw",
+      "name": "SIW Interface",
+      "url": "https://www.solarex.no/siw_10",
+      "repo": "nanotech-solutions-norway/SIW-v1.0",
+      "platform": "GitHub Pages",
+      "priority": "Medium",
+      "status": "Prototype",
+      "owner": "Product",
+      "metrics": {
+        "sessions": 2140,
+        "engagedSessions": 1675,
+        "conversions": 14,
+        "organicClicks": 184,
+        "impressions": 8430,
+        "ctr": 2.18,
+        "position": 21.6,
+        "cwvPass": 76,
+        "indexedPages": 17
+      },
+      "trafficTrend": [145, 152, 160, 174, 181, 190, 202],
+      "organicTrend": [21, 23, 24, 26, 27, 31, 32],
+      "topQueries": [
+        { "query": "surface intelligence workspace", "clicks": 26, "ctr": 4.4, "position": 8.1 },
+        { "query": "coating selector interface", "clicks": 18, "ctr": 2.3, "position": 15.5 },
+        { "query": "anti ice coating comparison", "clicks": 11, "ctr": 1.8, "position": 18.9 }
+      ],
+      "issues": [
+        { "severity": "High", "title": "Unify versioning and deployment state labels", "owner": "Engineering" },
+        { "severity": "Medium", "title": "Improve analytical telemetry around selector usage", "owner": "Product" },
+        { "severity": "Low", "title": "Refresh visual proof assets for mechanism panels", "owner": "Design" }
+      ],
+      "connectors": ["GitHub", "Google Drive"]
+    }
+  ],
+  "connectorCatalog": [
+    { "name": "GitHub", "role": "Code governance and direct repository actions", "status": "Required" },
+    { "name": "Google Drive", "role": "Document packs, logs, and working files", "status": "Optional / Recommended" },
+    { "name": "GA4", "role": "Traffic and engagement telemetry", "status": "Planned" },
+    { "name": "Google Search Console", "role": "Organic search and indexing telemetry", "status": "Planned" },
+    { "name": "PageSpeed Insights", "role": "Technical performance snapshots", "status": "Planned" },
+    { "name": "Microsoft Clarity", "role": "Behavior diagnostics and recordings", "status": "Planned" },
+    { "name": "Gamma", "role": "Page/deck drafting and visual prototyping", "status": "Optional" }
+  ],
+  "operationCatalog": [
+    "SEO audit and remediation brief",
+    "Metadata rewrite pack",
+    "Landing-page CTA improvement",
+    "Content accuracy review",
+    "Route and IA cleanup",
+    "Schema and structured data review",
+    "Release-note generation",
+    "Website transfer pack refresh",
+    "Technical proof-stack update"
+  ]
+}
