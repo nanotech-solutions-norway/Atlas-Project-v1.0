@@ -1,0 +1,52 @@
+{
+  "sites": [
+    {
+      "siteId": "solarex-v32",
+      "displayName": "SolarEX v3.2",
+      "repo": "nanotech-solutions-norway/SolarEX-v3.2",
+      "branch": "main",
+      "liveUrl": "https://nanotech-solutions-norway.github.io/SolarEX-v3.2/",
+      "category": "technology",
+      "environments": ["staging", "production"],
+      "connectors": {
+        "github": true,
+        "googleDrive": true,
+        "ga4": false,
+        "gsc": false,
+        "pagespeed": false
+      }
+    },
+    {
+      "siteId": "siw-v10",
+      "displayName": "SIW v1.0",
+      "repo": "nanotech-solutions-norway/SIW-v1.0",
+      "branch": "main",
+      "liveUrl": "https://www.solarex.no/siw_10",
+      "category": "workspace",
+      "environments": ["staging", "production"],
+      "connectors": {
+        "github": true,
+        "googleDrive": true,
+        "ga4": false,
+        "gsc": false,
+        "pagespeed": false
+      }
+    },
+    {
+      "siteId": "ntsn-v21",
+      "displayName": "NTSN v2.1",
+      "repo": "nanotech-solutions-norway/NTSN-v2.1",
+      "branch": "main",
+      "liveUrl": "",
+      "category": "corporate",
+      "environments": ["staging", "production"],
+      "connectors": {
+        "github": true,
+        "googleDrive": true,
+        "ga4": false,
+        "gsc": false,
+        "pagespeed": false
+      }
+    }
+  ]
+}
