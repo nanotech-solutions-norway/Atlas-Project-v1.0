@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Control Plane</title>
+    <meta
+      name="description"
+      content="Atlas Control Plane for multi-site monitoring, SEO operations, traffic review, and ChatGPT orchestration."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="topbar">
+        <div class="brand">
+          <p class="muted">Atlas operating layer</p>
+          <h1>Website Control Plane</h1>
+          <p>
+            Multi-site monitoring, SEO operations, traffic review, and
+            ChatGPT-led delivery orchestration from a GitHub-hosted interface.
+          </p>
+        </div>
+        <div class="actions-inline">
+          <button class="btn secondary" id="refresh-demo">Reload demo data</button>
+          <button class="btn" id="copy-json">Export active site JSON</button>
+          <button class="btn primary" id="open-chatgpt">Open ChatGPT</button>
+        </div>
+      </div>
+
+      <div class="notice">
+        <strong>Working pattern:</strong> this interface is the operational cockpit.
+        Standard ChatGPT is launched in a separate tab for connector-enabled work,
+        while this control plane prepares the site context, orchestration brief,
+        and execution trail.
+      </div>
+
+      <section class="grid kpi-grid" id="kpi-grid"></section>
+
+      <section class="grid main-grid">
+        <div class="grid panel-grid">
+          <div class="card">
+            <h2>Website portfolio</h2>
+            <p class="muted">
+              Choose the active website. The rest of the dashboard and Prompt Studio
+              will update to the selected context.
+            </p>
+            <div class="site-list" id="site-list"></div>
+          </div>
+
+          <div class="card">
+            <h2>Connector matrix</h2>
+            <p class="muted">
+              Current operating dependencies for repo, document, analytics, and
+              behavior workflows.
+            </p>
+            <div class="connector-list" id="connector-list"></div>
+          </div>
+
+          <div class="card">
+            <h2>Trend signals</h2>
+            <div class="dual-charts">
+              <div class="chart-card">
+                <strong>Traffic trend</strong>
+                <div class="mini-chart" id="traffic-chart"></div>
+              </div>
+              <div class="chart-card">
+                <strong>Organic trend</strong>
+                <div class="mini-chart" id="organic-chart"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Issue queue</h2>
+            <p class="muted">Priority actions that should shape the orchestration brief.</p>
+            <div class="issue-list" id="issue-list"></div>
+          </div>
+
+          <div class="card full-span">
+            <h2>Top search queries</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Query</th>
+                    <th>Clicks</th>
+                    <th>CTR</th>
+                    <th>Avg. position</th>
+                  </tr>
+                </thead>
+                <tbody id="query-table"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid panel-grid">
+          <div class="card full-span">
+            <h2>Website sandbox</h2>
+            <p class="muted">
+              Quick visual reference for the active site. Some websites may block
+              external framing; use the direct link when needed.
+            </p>
+            <iframe
+              id="site-preview"
+              class="preview-frame"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              title="Selected website preview"
+            ></iframe>
+            <div class="link-row">
+              <a id="live-link" class="btn" href="#" target="_blank" rel="noreferrer">Open live site</a>
+              <a id="repo-link" class="btn" href="#" target="_blank" rel="noreferrer">Open repository</a>
+            </div>
+          </div>
+
+          <div class="card full-span">
+            <h2>Prompt Studio</h2>
+            <p class="muted">
+              Build a structured ChatGPT orchestration brief for the active site.
+            </p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="operation-select">Operation</label>
+                <select id="operation-select"></select>
+              </div>
+              <div class="field">
+                <label for="objective-input">Immediate objective</label>
+                <input
+                  type="text"
+                  id="objective-input"
+                  value="Inspect live state, identify highest-value improvements, and prepare direct repo updates."
+                />
+              </div>
+              <div class="field full">
+                <label>Connected tools to reference in the orchestration brief</label>
+                <div class="checkbox-row" id="tool-pills"></div>
+              </div>
+              <div class="field full">
+                <label for="notes-input">Additional constraints or operating notes</label>
+                <textarea id="notes-input">Prioritize actions that can be executed against GitHub first. Use Google Drive for supporting packs and logs where appropriate. Keep the execution summary structured and implementation-ready.</textarea>
+              </div>
+            </div>
+            <div class="link-row">
+              <button class="btn primary" id="generate-prompt">Generate orchestration brief</button>
+              <button class="btn" id="copy-prompt">Copy prompt</button>
+            </div>
+            <div class="prompt-box" id="prompt-box"></div>
+            <p class="footer-note" id="prompt-status">
+              The generated brief will include site context, KPI status, issue queue,
+              and selected tool dependencies.
+            </p>
+          </div>
+
+          <div class="card full-span">
+            <h2>Execution log</h2>
+            <p class="muted">
+              Browser-local activity trail for prompt generation and launch actions.
+            </p>
+            <div class="log-list" id="log-list"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
