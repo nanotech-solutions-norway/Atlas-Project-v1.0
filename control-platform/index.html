@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Control Plane</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">Atlas Control Plane</div>
+      <nav>
+        <a class="nav-item active" href="#">Portfolio</a>
+        <a class="nav-item" href="#">Websites</a>
+        <a class="nav-item" href="#">SEO Ops</a>
+        <a class="nav-item" href="#">Traffic</a>
+        <a class="nav-item" href="#">Deployments</a>
+        <a class="nav-item" href="#">Logs</a>
+        <a class="nav-item" href="#">Admin</a>
+      </nav>
+      <div class="sidebar-footer">
+        GitHub-governed interface scaffold<br />
+        Branch-safe orchestration surface
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Multi-site monitoring and orchestration</h1>
+          <p>Traffic, SEO diagnostics, repository state, and controlled AI-assisted execution.</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="secondary">Compare period</button>
+          <button class="primary">Open orchestrator</button>
+        </div>
+      </header>
+
+      <section class="metrics" id="metrics"></section>
+
+      <section class="grid two-one">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Managed websites</h2>
+            <button class="secondary small">Filter</button>
+          </div>
+          <div id="sitesTable"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Prompt console</h2>
+          </div>
+          <label class="label" for="instructionInput">Instruction</label>
+          <textarea id="instructionInput" rows="8">Review /tech/solarex page, improve CTA hierarchy, tighten metadata, prepare branch-safe change set, and draft deployment notes.</textarea>
+          <div class="button-row">
+            <button class="primary" id="runPromptBtn">Generate action plan</button>
+            <button class="secondary">Open diff preview</button>
+          </div>
+          <div class="result-box" id="promptResult"></div>
+        </article>
+      </section>
+
+      <section class="grid two-one">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Orchestrator sandbox</h2>
+            <span class="tag">UI placeholder</span>
+          </div>
+          <p class="helper-text">
+            This region is intentionally sandboxed. In production, it should connect to an API/App/MCP orchestration service with GitHub and analytics adapters rather than relying on an uncontrolled third-party embedded chat surface.
+          </p>
+          <iframe
+            class="orchestrator-frame"
+            sandbox="allow-scripts allow-same-origin"
+            title="Orchestrator sandbox"
+            srcdoc="<!DOCTYPE html><html><head><style>body{font-family:Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:20px}h3{margin:0 0 12px}p{line-height:1.45;color:#cbd5e1}code{background:#1e293b;padding:2px 6px;border-radius:6px}</style></head><body><h3>Sandboxed orchestrator panel</h3><p>Use this area for a controlled bridge to ChatGPT or an OpenAI-backed orchestration service.</p><p>Recommended execution path: <code>prompt -> planner -> tool calls -> diff preview -> approval -> PR/deploy</code>.</p></body></html>">
+          </iframe>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Suggested actions</h2>
+          </div>
+          <ul class="action-list">
+            <li>Connect repository and branch policy to selected site</li>
+            <li>Bind Search Console and analytics properties</li>
+            <li>Add deployment-log sink and changelog template</li>
+            <li>Route approved tasks into pull-request workflow</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid two-one">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Approval queue</h2>
+          </div>
+          <div class="approval-card">
+            <strong>Pending task</strong>
+            <p>Meta title normalization and CTA refinement for high-value technical pages.</p>
+            <div class="button-row">
+              <button class="primary small">Approve to branch</button>
+              <button class="secondary small">Request revision</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Activity log</h2>
+          </div>
+          <ul class="log-list">
+            <li>Repo binding validated for Atlas control plane</li>
+            <li>Feature branch scaffold prepared for interface work</li>
+            <li>Architecture note added for governed orchestration model</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
