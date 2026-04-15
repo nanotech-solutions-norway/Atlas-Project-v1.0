@@ -1,0 +1,11 @@
+{
+  "name": "atlas-control-platform-bootstrap",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Bootstrap scaffold for the Atlas multi-site AI control platform.",
+  "scripts": {
+    "dev:web": "npm --prefix apps/admin-web run dev",
+    "build:web": "npm --prefix apps/admin-web run build",
+    "lint:web": "npm --prefix apps/admin-web run lint"
+  }
+}
