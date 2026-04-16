@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Control Plane v2</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --panel: #111a2e;
+        --panel-2: #16233d;
+        --text: #edf3ff;
+        --muted: #9fb0d1;
+        --line: rgba(255,255,255,0.08);
+        --accent: #5aa9ff;
+        --ok: #84e1a8;
+        --warn: #ffbf5f;
+        --danger: #ff7f7f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, Arial, sans-serif;
+        background: radial-gradient(circle at top right, rgba(90,169,255,0.14), transparent 24%), linear-gradient(180deg, #09111d, var(--bg));
+        color: var(--text);
+      }
+      .shell { max-width: 1440px; margin: 0 auto; padding: 24px; }
+      .hero, .card { background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 20px; }
+      .hero { padding: 22px; margin-bottom: 18px; display: grid; grid-template-columns: 1fr auto; gap: 18px; }
+      .hero h1 { margin: 0 0 8px; }
+      .hero p { margin: 0; color: var(--muted); max-width: 840px; }
+      .actions, .inline { display: flex; gap: 10px; flex-wrap: wrap; }
+      .grid { display: grid; gap: 18px; grid-template-columns: 360px 1fr; }
+      .stack { display: grid; gap: 18px; }
+      .card { padding: 18px; }
+      .card h2, .card h3 { margin-top: 0; }
+      .site-list, .issue-list, .deliverables, .tool-list, .summary { display: grid; gap: 10px; }
+      .site { width: 100%; text-align: left; padding: 14px; border-radius: 16px; border: 1px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); cursor: pointer; }
+      .site.active { border-color: rgba(90,169,255,0.5); background: rgba(90,169,255,0.10); }
+      .muted { color: var(--muted); }
+      .badge { display: inline-flex; align-items: center; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.8rem; background: rgba(255,255,255,0.04); }
+      .btn { min-height: 42px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); text-decoration: none; cursor: pointer; }
+      .btn.primary { background: linear-gradient(180deg, rgba(90,169,255,0.96), rgba(62,138,255,0.96)); border-color: transparent; color: white; }
+      .kpis { display: grid; gap: 12px; grid-template-columns: repeat(4, 1fr); }
+      .kpi { padding: 14px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--line); }
+      .kpi .label { color: var(--muted); font-size: 0.9rem; }
+      .kpi .value { font-size: 1.5rem; font-weight: 700; margin-top: 8px; }
+      .two { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+      .mini-chart { display: flex; align-items: end; gap: 8px; min-height: 130px; margin-top: 12px; }
+      .bar { flex: 1; border-radius: 12px 12px 4px 4px; background: linear-gradient(180deg, #84e1a8, #5aa9ff); min-width: 16px; }
+      iframe { width: 100%; min-height: 420px; border: 1px solid var(--line); border-radius: 16px; background: white; }
+      label { display: grid; gap: 8px; color: var(--muted); }
+      input, select, textarea {
+        width: 100%; min-height: 46px; border-radius: 12px; border: 1px solid var(--line); background: rgba(8,15,28,0.95); color: var(--text); padding: 12px;
+      }
+      textarea { min-height: 110px; resize: vertical; }
+      .tool-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+      .pill { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; border: 1px solid var(--line); padding: 10px 12px; background: rgba(255,255,255,0.03); }
+      .prompt { min-height: 360px; white-space: pre-wrap; border-radius: 16px; border: 1px solid var(--line); background: #0b132a; padding: 14px; font-family: ui-monospace, monospace; }
+      ul { margin: 0; padding-left: 18px; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); }
+      th { color: var(--muted); }
+      @media (max-width: 1160px) { .grid, .two, .kpis, .hero { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <div class="muted">Atlas operating layer</div>
+          <h1>Website Control Plane v2</h1>
+          <p>Task-template aware control plane for multi-site monitoring and ChatGPT orchestration. This version binds operation type, default tools, deliverables, and objective generation into one workflow.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="../control-plane/">Open v1</a>
+          <button class="btn" id="copyJsonBtn">Copy site JSON</button>
+          <button class="btn primary" id="openChatgptBtn">Open ChatGPT</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <aside class="stack">
+          <div class="card">
+            <h2>Website portfolio</h2>
+            <div id="siteList" class="site-list"></div>
+          </div>
+          <div class="card">
+            <h2>Operation template</h2>
+            <label>
+              <span>Operation</span>
+              <select id="operationSelect"></select>
+            </label>
+            <div class="summary" style="margin-top:14px;">
+              <div><strong>Default tools</strong></div>
+              <div id="defaultTools" class="muted"></div>
+              <div><strong>Deliverables</strong></div>
+              <div id="deliverables" class="deliverables"></div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Issue queue</h2>
+            <div id="issueList" class="issue-list"></div>
+          </div>
+        </aside>
+
+        <main class="stack">
+          <div class="card">
+            <div class="inline" style="justify-content:space-between; align-items:center;">
+              <div>
+                <div class="muted">Selected website</div>
+                <h2 id="siteTitle">-</h2>
+              </div>
+              <div class="inline">
+                <a id="liveLink" class="btn" href="#" target="_blank" rel="noreferrer">Open live site</a>
+                <a id="repoLink" class="btn" href="#" target="_blank" rel="noreferrer">Open repository</a>
+              </div>
+            </div>
+            <div id="kpis" class="kpis"></div>
+          </div>
+
+          <div class="two">
+            <div class="card">
+              <h3>Traffic trend</h3>
+              <div id="trafficChart" class="mini-chart"></div>
+            </div>
+            <div class="card">
+              <h3>Organic trend</h3>
+              <div id="organicChart" class="mini-chart"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Top search queries</h3>
+            <table>
+              <thead>
+                <tr><th>Query</th><th>Clicks</th><th>CTR</th><th>Position</th></tr>
+              </thead>
+              <tbody id="queryTable"></tbody>
+            </table>
+          </div>
+
+          <div class="card">
+            <h3>Website sandbox</h3>
+            <p class="muted">Visual reference frame for the active website. Some websites may block framing.</p>
+            <iframe id="siteFrame" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+          </div>
+
+          <div class="card">
+            <h2>Prompt Studio</h2>
+            <div class="two">
+              <label>
+                <span>Immediate objective</span>
+                <input id="objectiveInput" type="text" />
+              </label>
+              <label>
+                <span>Requested tools</span>
+                <div id="toolPills" class="tool-pills"></div>
+              </label>
+            </div>
+            <label style="margin-top:14px;">
+              <span>Execution notes</span>
+              <textarea id="notesInput"></textarea>
+            </label>
+            <div class="actions" style="margin-top:14px;">
+              <button class="btn primary" id="generateBtn">Generate brief</button>
+              <button class="btn" id="copyPromptBtn">Copy brief</button>
+            </div>
+            <div id="promptBox" class="prompt" style="margin-top:14px;"></div>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    <script>
+      const state = { sites: [], templates: [], activeSiteId: null, activeTemplateId: null, prompt: '' };
+      const $ = (id) => document.getElementById(id);
+      const els = {
+        siteList: $('siteList'), operationSelect: $('operationSelect'), defaultTools: $('defaultTools'), deliverables: $('deliverables'),
+        issueList: $('issueList'), siteTitle: $('siteTitle'), liveLink: $('liveLink'), repoLink: $('repoLink'), kpis: $('kpis'),
+        trafficChart: $('trafficChart'), organicChart: $('organicChart'), queryTable: $('queryTable'), siteFrame: $('siteFrame'),
+        objectiveInput: $('objectiveInput'), toolPills: $('toolPills'), notesInput: $('notesInput'), promptBox: $('promptBox'),
+        generateBtn: $('generateBtn'), copyPromptBtn: $('copyPromptBtn'), copyJsonBtn: $('copyJsonBtn'), openChatgptBtn: $('openChatgptBtn')
+      };
+
+      async function loadJson(path) {
+        const res = await fetch(path, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Failed loading ' + path);
+        return res.json();
+      }
+
+      async function init() {
+        const [siteData, templateData] = await Promise.all([
+          loadJson('../control-plane/data/sites.example.json'),
+          loadJson('../control-plane/data/task-templates.json')
+        ]);
+        state.sites = siteData.sites || [];
+        state.templates = templateData.taskTemplates || [];
+        state.activeSiteId = state.sites[0]?.id || null;
+        state.activeTemplateId = state.templates[0]?.id || null;
+        render();
+        bind();
+      }
+
+      function activeSite() { return state.sites.find(s => s.id === state.activeSiteId) || null; }
+      function activeTemplate() { return state.templates.find(t => t.id === state.activeTemplateId) || null; }
+      function fmt(n) { return new Intl.NumberFormat('en-US').format(n); }
+
+      function render() {
+        renderSiteList();
+        renderTemplateSelect();
+        applyTemplateToForm(false);
+        renderSiteDetails();
+      }
+
+      function renderSiteList() {
+        els.siteList.innerHTML = state.sites.map(site => `
+          <button class="site ${site.id === state.activeSiteId ? 'active' : ''}" data-site-id="${site.id}">
+            <div><strong>${site.name}</strong></div>
+            <div class="muted">${site.platform}</div>
+            <div class="inline" style="margin-top:8px;">
+              <span class="badge">${site.priority}</span>
+              <span class="badge">${site.status}</span>
+            </div>
+          </button>
+        `).join('');
+      }
+
+      function renderTemplateSelect() {
+        els.operationSelect.innerHTML = state.templates.map(t => `<option value="${t.id}" ${t.id === state.activeTemplateId ? 'selected' : ''}>${t.name}</option>`).join('');
+      }
+
+      function applyTemplateToForm(overwriteObjective = true) {
+        const template = activeTemplate();
+        if (!template) return;
+        els.defaultTools.textContent = template.defaultTools.join(', ');
+        els.deliverables.innerHTML = `<ul>${template.deliverables.map(d => `<li>${d}</li>`).join('')}</ul>`;
+        if (overwriteObjective || !els.objectiveInput.value.trim()) {
+          els.objectiveInput.value = template.objectiveTemplate;
+        }
+        renderToolPills(template.defaultTools);
+      }
+
+      function renderToolPills(defaultTools) {
+        const allTools = Array.from(new Set([
+          ...defaultTools,
+          'GitHub', 'Google Drive', 'GA4', 'Google Search Console', 'PageSpeed Insights', 'Microsoft Clarity', 'Gamma'
+        ]));
+        els.toolPills.innerHTML = allTools.map(tool => `
+          <label class="pill"><input type="checkbox" value="${tool}" ${defaultTools.includes(tool) ? 'checked' : ''}/> <span>${tool}</span></label>
+        `).join('');
+      }
+
+      function renderSiteDetails() {
+        const site = activeSite();
+        if (!site) return;
+        els.siteTitle.textContent = site.name;
+        els.liveLink.href = site.url;
+        els.repoLink.href = `https://github.com/${site.repo}`;
+        els.siteFrame.src = site.url;
+        els.kpis.innerHTML = [
+          ['Sessions', fmt(site.metrics.sessions)],
+          ['Conversions', fmt(site.metrics.conversions)],
+          ['Organic clicks', fmt(site.metrics.organicClicks)],
+          ['CWV pass', site.metrics.cwvPass + '%']
+        ].map(([k,v]) => `<div class="kpi"><div class="label">${k}</div><div class="value">${v}</div></div>`).join('');
+        els.issueList.innerHTML = site.issues.map(issue => `<div class="card" style="padding:12px;"><strong>${issue.title}</strong><div class="muted">${issue.severity} · ${issue.owner}</div></div>`).join('');
+        els.queryTable.innerHTML = site.topQueries.map(q => `<tr><td>${q.query}</td><td>${q.clicks}</td><td>${q.ctr}%</td><td>${q.position}</td></tr>`).join('');
+        renderBars(els.trafficChart, site.trafficTrend);
+        renderBars(els.organicChart, site.organicTrend);
+      }
+
+      function renderBars(target, series) {
+        const max = Math.max(...series, 1);
+        target.innerHTML = series.map(v => `<div class="bar" style="height:${Math.max(18, Math.round(v / max * 110))}px" title="${v}"></div>`).join('');
+      }
+
+      function selectedTools() {
+        return Array.from(els.toolPills.querySelectorAll('input:checked')).map(i => i.value);
+      }
+
+      function buildPrompt() {
+        const site = activeSite();
+        const template = activeTemplate();
+        const tools = selectedTools();
+        const issueLines = site.issues.map(i => `- ${i.severity}: ${i.title} (owner: ${i.owner})`).join('\n');
+        const queryLines = site.topQueries.map(q => `- ${q.query}: ${q.clicks} clicks, CTR ${q.ctr}%, average position ${q.position}`).join('\n');
+        const deliverableLines = template.deliverables.map(d => `- ${d}`).join('\n');
+        state.prompt = [
+          `You are the website delivery orchestrator for ${site.name}.`,
+          '',
+          'Execution target',
+          `- Live website: ${site.url}`,
+          `- GitHub repository: ${site.repo}`,
+          `- Platform context: ${site.platform}`,
+          `- Business owner: ${site.owner}`,
+          '',
+          'Requested operation',
+          `- Operation type: ${template.name}`,
+          `- Immediate objective: ${els.objectiveInput.value.trim()}`,
+          '',
+          'Required deliverables',
+          deliverableLines,
+          '',
+          'Current KPI snapshot',
+          `- Sessions: ${site.metrics.sessions}`,
+          `- Engaged sessions: ${site.metrics.engagedSessions}`,
+          `- Conversions: ${site.metrics.conversions}`,
+          `- Organic clicks: ${site.metrics.organicClicks}`,
+          `- Impressions: ${site.metrics.impressions}`,
+          `- CTR: ${site.metrics.ctr}%`,
+          `- Average position: ${site.metrics.position}`,
+          `- Core Web Vitals pass rate: ${site.metrics.cwvPass}%`,
+          `- Indexed pages: ${site.metrics.indexedPages}`,
+          '',
+          'Priority issue queue',
+          issueLines,
+          '',
+          'Top query context',
+          queryLines,
+          '',
+          'Requested tools/apps',
+          tools.map(t => `- ${t}`).join('\n'),
+          '',
+          'Execution requirements',
+          '- Inspect the live site and repository state before proposing changes.',
+          '- Use GitHub for direct repo-side actions where appropriate.',
+          '- Use Google Drive for supporting source packs, logs, and working documents where relevant.',
+          '- Keep the output structured by findings, actions, blockers, and proposed implementation steps.',
+          '',
+          'Additional notes',
+          `- ${els.notesInput.value.trim() || 'No extra notes supplied.'}`
+        ].join('\n');
+        els.promptBox.textContent = state.prompt;
+      }
+
+      async function copy(text) { try { await navigator.clipboard.writeText(text); } catch (e) {} }
+
+      function bind() {
+        els.siteList.addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-site-id]');
+          if (!btn) return;
+          state.activeSiteId = btn.dataset.siteId;
+          render();
+          buildPrompt();
+        });
+        els.operationSelect.addEventListener('change', () => {
+          state.activeTemplateId = els.operationSelect.value;
+          applyTemplateToForm(true);
+          buildPrompt();
+        });
+        els.generateBtn.addEventListener('click', buildPrompt);
+        els.copyPromptBtn.addEventListener('click', async () => { buildPrompt(); await copy(state.prompt); });
+        els.copyJsonBtn.addEventListener('click', async () => { await copy(JSON.stringify(activeSite(), null, 2)); });
+        els.openChatgptBtn.addEventListener('click', async () => { buildPrompt(); await copy(state.prompt); window.open('https://chatgpt.com/', '_blank', 'noopener,noreferrer'); });
+      }
+
+      init().then(buildPrompt).catch(err => {
+        document.body.innerHTML = '<div style="padding:24px;color:white;font-family:Arial">Failed loading control-plane-v2 data files.</div>';
+        console.error(err);
+      });
+    </script>
+  </body>
+</html>
