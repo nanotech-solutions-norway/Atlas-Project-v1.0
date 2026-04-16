@@ -1,0 +1,40 @@
+name: Validate Control Plane
+
+on:
+  push:
+    paths:
+      - 'control-plane/**'
+      - '.github/workflows/validate-control-plane.yml'
+  pull_request:
+    paths:
+      - 'control-plane/**'
+      - '.github/workflows/validate-control-plane.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JSON syntax
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('control-plane/data/sites.example.json','utf8')); console.log('sites.example.json OK')"
+
+      - name: Check required UI files
+        run: |
+          test -f control-plane/index.html
+          test -f control-plane/styles.css
+          test -f control-plane/app.js
+          echo 'UI files present'
+
+      - name: Basic HTML sanity check
+        run: |
+          grep -q 'Website Control Plane' control-plane/index.html
+          grep -q 'Prompt Studio' control-plane/index.html
+          echo 'HTML sanity check passed'
