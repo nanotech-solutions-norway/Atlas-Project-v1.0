@@ -1,0 +1,49 @@
+{
+  "taskTemplates": [
+    {
+      "id": "seo-audit",
+      "name": "SEO audit and remediation brief",
+      "objectiveTemplate": "Inspect live state, identify the highest-value SEO issues, and prepare direct repository updates where possible.",
+      "defaultTools": ["GitHub", "Google Drive", "Google Search Console", "PageSpeed Insights"],
+      "deliverables": [
+        "finding summary",
+        "prioritized issue list",
+        "implementation-ready change plan",
+        "repo-side update recommendations"
+      ]
+    },
+    {
+      "id": "metadata-rewrite",
+      "name": "Metadata rewrite pack",
+      "objectiveTemplate": "Review metadata quality and prepare revised title tags, meta descriptions, and heading recommendations.",
+      "defaultTools": ["GitHub", "Google Drive", "Google Search Console"],
+      "deliverables": [
+        "page inventory",
+        "rewritten metadata pack",
+        "implementation notes"
+      ]
+    },
+    {
+      "id": "cta-improvement",
+      "name": "Landing-page CTA improvement",
+      "objectiveTemplate": "Review the active landing pages and improve CTA clarity, routing, and conversion intent.",
+      "defaultTools": ["GitHub", "Google Drive"],
+      "deliverables": [
+        "CTA findings",
+        "recommended CTA rewrites",
+        "placement and UX notes"
+      ]
+    },
+    {
+      "id": "content-accuracy",
+      "name": "Content accuracy review",
+      "objectiveTemplate": "Validate active content against source materials and identify inaccuracies, unsupported claims, and update opportunities.",
+      "defaultTools": ["GitHub", "Google Drive"],
+      "deliverables": [
+        "validated claim list",
+        "correction list",
+        "copy-ready revised content"
+      ]
+    }
+  ]
+}
