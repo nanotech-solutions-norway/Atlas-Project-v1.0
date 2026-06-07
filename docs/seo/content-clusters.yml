@@ -1,0 +1,90 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+clusters:
+  - id: business-ai-work-solutions
+    segment: business_professional
+    hub_route: /solutions/business-ai/
+    core_pages:
+      - /solutions/
+      - /solutions/business-ai/
+      - /solutions/team-workspace/
+      - /pricing/
+      - /onboarding/
+    supporting_content:
+      - title: 'AI adoption checklist for Norwegian SMBs'
+        type: guide
+        status: planned
+      - title: 'Build vs. buy vs. customize AI workflows'
+        type: guide
+        status: planned
+      - title: 'AI governance for small teams'
+        type: trust_resource
+        status: planned
+  - id: student-ai-learning
+    segment: student
+    hub_route: /solutions/students/
+    core_pages:
+      - /solutions/students/
+      - /resources/responsible-ai-study-use/
+      - /pricing/student-packages/
+    supporting_content:
+      - title: 'How to use AI ethically for study'
+        type: responsible_use_guide
+        status: planned
+      - title: 'AI note summarization with verification'
+        type: guide
+        status: planned
+      - title: 'Exam planning checklist'
+        type: checklist
+        status: planned
+  - id: consumer-ai-productivity
+    segment: consumer_private_user
+    hub_route: /solutions/consumers/
+    core_pages:
+      - /solutions/consumers/
+      - /pricing/individual-packages/
+    supporting_content:
+      - title: 'AI for daily planning'
+        type: guide
+        status: planned
+      - title: 'What not to put into an AI assistant'
+        type: privacy_guide
+        status: planned
+  - id: trust-and-governance
+    segment: all
+    hub_route: /trust/
+    core_pages:
+      - /trust/
+      - /trust/privacy/
+      - /trust/security/
+      - /trust/provider-disclosure/
+      - /trust/ai-limitations/
+      - /trust/data-handling/
+    supporting_content:
+      - title: 'Data handling FAQ'
+        type: faq
+        status: planned
+      - title: 'AI limitations page'
+        type: trust_resource
+        status: planned
+      - title: 'Controlled secure intake explainer'
+        type: secure_path_explainer
+        status: planned
+  - id: platform-lanes
+    segment: business_professional
+    hub_route: /platform-lanes/
+    core_pages:
+      - /platform-lanes/openai-chatgpt/
+      - /platform-lanes/microsoft-copilot/
+      - /platform-lanes/google-gemini/
+      - /platform-lanes/anthropic-claude/
+      - /platform-lanes/perplexity-research/
+      - /platform-lanes/azure-secure-orchestration/
+    supporting_content:
+      - title: 'How platform lanes differ'
+        type: explainer
+        status: planned
+      - title: 'Vendor license and BYOL policy'
+        type: policy_explainer
+        status: planned
