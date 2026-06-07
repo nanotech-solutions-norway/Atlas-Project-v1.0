@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.atlas-ai.no/schemas/secure-handoff-contract.schema.json",
+  "title": "Atlas AI Secure Handoff Contract",
+  "status": "proposed_for_review",
+  "updated": "2026-06-08",
+  "description": "Structured handoff contract from Wix/Phase 2 qualification to a future Azure secure-intake path. This contract does not activate Azure and must not be used for raw confidential Wix form payloads.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "website_route",
+    "lead_id",
+    "package_id",
+    "customer_segment",
+    "risk_score",
+    "risk_class",
+    "data_category",
+    "secure_required",
+    "requested_material_type",
+    "retention_rule",
+    "internal_owner"
+  ],
+  "properties": {
+    "website_route": {"type": "string", "description": "Originating Wix route or CTA source."},
+    "lead_id": {"type": "string", "description": "Non-sensitive lead reference only."},
+    "package_id": {"type": "string", "description": "Maps request to package/CMS record."},
+    "customer_segment": {"type": "string", "enum": ["business_professional", "student", "consumer_private_user"]},
+    "risk_score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "risk_class": {"type": "string", "enum": ["Green", "Amber", "Red"]},
+    "data_category": {"type": "string", "enum": ["public", "internal", "confidential", "restricted", "regulated", "special_category"]},
+    "secure_required": {"type": "boolean"},
+    "requested_material_type": {"type": "string", "enum": ["none", "documents", "data_sample", "protected_artifact", "architecture_diagram"]},
+    "retention_rule": {"type": "string", "description": "Retention and deletion policy reference."},
+    "internal_owner": {"type": "string"},
+    "claim_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}
