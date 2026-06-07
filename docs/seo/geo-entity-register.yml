@@ -1,0 +1,65 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+entities:
+  - id: ENT-0001
+    entity_name: Atlas AI
+    entity_type: Organization
+    sameAs: []
+    related_pages:
+      - /
+      - /trust/
+      - /solutions/
+    schema_type: Organization
+    approved_description: 'Atlas AI is a Norway-first governed AI solution-layer company offering AI solution packages, work models and onboarding support.'
+    approval_status: pending_review
+  - id: ENT-0002
+    entity_name: Atlas AI solution packages
+    entity_type: ServiceCatalog
+    sameAs: []
+    related_pages:
+      - /solutions/
+      - /pricing/
+    schema_type: Service
+    approved_description: 'Atlas AI solution packages are scoped AI work offers organized by business outcome, study support or everyday productivity need.'
+    approval_status: pending_review
+  - id: ENT-0003
+    entity_name: Governed AI assistants
+    entity_type: Concept
+    sameAs: []
+    related_pages:
+      - /solutions/
+      - /trust/
+    schema_type: DefinedTerm
+    approved_description: 'Governed AI assistants are configured AI workflows with defined scope, limitations, data-handling boundaries and human-review expectations.'
+    approval_status: pending_review
+  - id: ENT-0004
+    entity_name: Managed Secure
+    entity_type: Service
+    sameAs: []
+    related_pages:
+      - /managed-secure/
+      - /trust/security/
+      - /trust/data-handling/
+    schema_type: Service
+    approved_description: 'Managed Secure is the Atlas AI controlled route for confidential and control-sensitive workflows, activated only after architecture review and validated secure-path controls.'
+    approval_status: evidence_gated
+  - id: ENT-0005
+    entity_name: Trust Center
+    entity_type: WebPage
+    sameAs: []
+    related_pages:
+      - /trust/
+      - /legal/
+    schema_type: WebPage
+    approved_description: 'The Atlas AI Trust Center explains privacy, security, provider disclosure, AI limitations, data handling and responsible-use boundaries.'
+    approval_status: pending_review
+  - id: ENT-0006
+    entity_name: Platform lanes
+    entity_type: Concept
+    sameAs: []
+    related_pages:
+      - /platform-lanes/
+    schema_type: DefinedTerm
+    approved_description: 'Platform lanes explain where Atlas AI workflows may run, including third-party AI platforms or future secure orchestration, without implying vendor ownership or endorsement.'
+    approval_status: pending_review
