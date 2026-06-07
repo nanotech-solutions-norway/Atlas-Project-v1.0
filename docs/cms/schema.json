@@ -1,0 +1,145 @@
+{
+  "status": "proposed_for_review",
+  "updated": "2026-06-08",
+  "ownerSystem": "GitHub",
+  "classificationRule": "Wix CMS is public/commercial only. It is not a secure system of record.",
+  "collections": {
+    "packages": {
+      "classification": "public",
+      "requiredFields": ["slug", "name", "summary", "segment", "delivery_mode", "platform_lane", "risk_class", "includes", "excludes", "price_band", "cta", "seo_title", "meta_description", "language_status"],
+      "fields": {
+        "slug": "string",
+        "name": "string",
+        "summary": "string",
+        "segment": "enum:business_professional|student|consumer_private_user",
+        "delivery_mode": "enum:native|guided_setup|managed_secure_future|managed_secure_active",
+        "platform_lane": "string",
+        "risk_class": "enum:green|amber|red",
+        "includes": "array:string",
+        "excludes": "array:string",
+        "price_band": "string",
+        "sla": "string",
+        "cta": "string",
+        "seo_title": "string",
+        "meta_description": "string",
+        "schema_json": "object",
+        "language_status": "enum:nb_NO_ready|en_ready|bilingual_ready|pending_review"
+      }
+    },
+    "platform_lanes": {
+      "classification": "public",
+      "requiredFields": ["provider_name", "best_for", "auth_model", "privacy_note", "admin_controls", "supported_packages", "provider_disclosure_ref"],
+      "fields": {
+        "provider_name": "string",
+        "best_for": "string",
+        "auth_model": "string",
+        "privacy_note": "string",
+        "admin_controls": "string",
+        "supported_packages": "array:string",
+        "provider_disclosure_ref": "string"
+      }
+    },
+    "customer_segments": {
+      "classification": "public",
+      "requiredFields": ["segment_name", "pain_points", "desired_outcomes", "example_packages", "risk_notes", "cta_ref"],
+      "fields": {
+        "segment_name": "enum:business_professional|student|consumer_private_user",
+        "pain_points": "array:string",
+        "desired_outcomes": "array:string",
+        "example_packages": "array:string",
+        "risk_notes": "array:string",
+        "cta_ref": "string"
+      }
+    },
+    "trust_topics": {
+      "classification": "public",
+      "requiredFields": ["title", "summary", "body", "disclosure_type", "claim_refs", "review_date"],
+      "fields": {
+        "title": "string",
+        "summary": "string",
+        "body": "string",
+        "related_documents": "array:string",
+        "disclosure_type": "enum:privacy|security|provider|ai_limitation|data_handling|legal",
+        "claim_refs": "array:string",
+        "review_date": "date"
+      }
+    },
+    "pricing_plans": {
+      "classification": "public",
+      "requiredFields": ["package_ref", "pricing_model", "license_policy", "exclusions", "cta"],
+      "fields": {
+        "package_ref": "string",
+        "pricing_model": "enum:one_time|subscription|quote|pass_through|prepaid_cap",
+        "one_time_fee": "string",
+        "recurring_fee": "string",
+        "license_policy": "string",
+        "exclusions": "array:string",
+        "cta": "string"
+      }
+    },
+    "onboarding_routes": {
+      "classification": "public_low_risk",
+      "requiredFields": ["route_slug", "score_range", "next_step", "internal_owner", "secure_required", "confirmation_copy"],
+      "fields": {
+        "route_slug": "string",
+        "score_range": "string",
+        "next_step": "string",
+        "internal_owner": "string",
+        "secure_required": "boolean",
+        "confirmation_copy": "string"
+      }
+    },
+    "faqs": {
+      "classification": "public",
+      "requiredFields": ["question", "short_answer", "expanded_answer", "category", "schema_eligible", "last_reviewed"],
+      "fields": {
+        "question": "string",
+        "short_answer": "string",
+        "expanded_answer": "string",
+        "category": "string",
+        "related_package": "string",
+        "related_platform": "string",
+        "schema_eligible": "boolean",
+        "last_reviewed": "date"
+      }
+    },
+    "legal_docs": {
+      "classification": "public",
+      "requiredFields": ["name", "version", "effective_date", "summary", "canonical_url_path", "owner", "review_status"],
+      "fields": {
+        "name": "string",
+        "version": "string",
+        "effective_date": "date",
+        "summary": "string",
+        "canonical_url_path": "string",
+        "owner": "string",
+        "review_status": "enum:draft|legal_review|approved|expired"
+      }
+    },
+    "claims_registry": {
+      "classification": "governance_public_reference",
+      "requiredFields": ["claim_text", "claim_type", "evidence_ref", "approval_status", "owner", "review_date", "public_allowed"],
+      "fields": {
+        "claim_text": "string",
+        "claim_type": "enum:capability|privacy|security|vendor|pricing|performance|legal",
+        "evidence_ref": "string",
+        "approval_status": "enum:draft|pending_review|approved|rejected|expired",
+        "owner": "string",
+        "review_date": "date",
+        "public_allowed": "boolean"
+      }
+    },
+    "locale_strings": {
+      "classification": "public",
+      "requiredFields": ["key", "nb_NO", "en", "context", "owner", "review_status"],
+      "fields": {
+        "key": "string",
+        "nb_NO": "string",
+        "en": "string",
+        "context": "string",
+        "owner": "string",
+        "review_status": "enum:draft|approved|needs_update"
+      }
+    }
+  }
+}
