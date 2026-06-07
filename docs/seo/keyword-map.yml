@@ -1,0 +1,94 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+canonical_domain: 'https://www.atlas-ai.no'
+notes:
+  - 'Business/professional buyers are the primary commercial route.'
+  - 'Students and consumers are secondary controlled lanes.'
+  - 'Provider names are explanatory platform lanes, not Atlas-owned product names.'
+clusters:
+  - id: business-ai-work-solutions
+    priority: primary
+    target_page: /solutions/business-ai/
+    locale: nb_NO,en
+    primary_keyword: 'AI solutions for Norwegian businesses'
+    secondary_keywords:
+      - 'governed AI assistants'
+      - 'AI workflow automation for SMBs'
+      - 'AI adoption for small teams'
+      - 'Atlas AI business packages'
+    intent: commercial_investigation
+    cta: 'Book discovery call'
+    status: needs_copy_and_metadata_review
+  - id: team-workspace
+    priority: primary
+    target_page: /solutions/team-workspace/
+    locale: nb_NO,en
+    primary_keyword: 'AI team workspace'
+    secondary_keywords:
+      - 'role-specific AI assistants'
+      - 'AI workspace for teams'
+      - 'AI knowledge workflow'
+    intent: commercial_investigation
+    cta: 'Request workspace review'
+    status: planned
+  - id: managed-secure
+    priority: primary
+    target_page: /managed-secure/
+    locale: nb_NO,en
+    primary_keyword: 'secure AI workflow delivery'
+    secondary_keywords:
+      - 'Managed Secure AI'
+      - 'secure intake for AI projects'
+      - 'AI architecture review'
+    intent: high_intent_lead
+    cta: 'Request architecture review'
+    status: evidence_gated
+  - id: pricing
+    priority: primary
+    target_page: /pricing/
+    locale: nb_NO,en
+    primary_keyword: 'AI solution package pricing'
+    secondary_keywords:
+      - 'AI implementation pricing Norway'
+      - 'vendor license pass-through AI'
+      - 'Atlas AI pricing'
+    intent: commercial_comparison
+    cta: 'Request quote'
+    status: planned
+  - id: trust-governance
+    priority: primary
+    target_page: /trust/
+    locale: nb_NO,en
+    primary_keyword: 'AI governance and data handling'
+    secondary_keywords:
+      - 'AI provider disclosure'
+      - 'AI privacy and security'
+      - 'AI limitations and human review'
+    intent: trust_validation
+    cta: 'Download trust pack'
+    status: planned
+  - id: student-ai-learning
+    priority: secondary_controlled
+    target_page: /solutions/students/
+    locale: nb_NO,en
+    primary_keyword: 'responsible AI study planner'
+    secondary_keywords:
+      - 'AI exam planning'
+      - 'AI study support without cheating'
+      - 'AI source coach for students'
+    intent: educational_utility
+    cta: 'Explore study package'
+    status: guardrail_review_required
+  - id: consumer-ai-productivity
+    priority: secondary_controlled
+    target_page: /solutions/consumers/
+    locale: nb_NO,en
+    primary_keyword: 'personal AI organizer'
+    secondary_keywords:
+      - 'AI for daily planning'
+      - 'AI writing support for private users'
+      - 'personal productivity AI assistant'
+    intent: utility_purchase
+    cta: 'Start guided setup'
+    status: guardrail_review_required
