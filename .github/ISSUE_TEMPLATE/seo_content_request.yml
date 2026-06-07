@@ -1,0 +1,64 @@
+name: SEO content request
+description: Governed SEO/AEO/GEO content, metadata, route or Wix publication request
+title: '[SEO] '
+labels: ['seo', 'website', 'governance']
+body:
+  - type: input
+    id: route
+    attributes:
+      label: Page route
+      description: Wix route or planned route
+      placeholder: /solutions/business-ai/
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - nb_NO
+        - en
+        - bilingual
+    validations:
+      required: true
+  - type: input
+    id: keyword
+    attributes:
+      label: Target keyword / intent
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience segment
+      options:
+        - business_professional
+        - student
+        - consumer_private_user
+        - all
+    validations:
+      required: true
+  - type: textarea
+    id: claim_impact
+    attributes:
+      label: Claim / legal / security impact
+      description: List public claims, provider references, pricing/security statements or legal dependencies.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source basis and evidence
+    validations:
+      required: true
+  - type: checkboxes
+    id: controls
+    attributes:
+      label: Required controls
+      options:
+        - label: No secrets or customer confidential material included
+          required: true
+        - label: Claims registry impact reviewed
+          required: true
+        - label: Hreflang / metadata / internal-link impact reviewed
+          required: true
