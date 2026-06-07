@@ -1,0 +1,56 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+rules:
+  - 'Every public security, privacy, vendor, pricing, performance or Managed Secure claim requires evidence_ref and approval_status=approved before publication.'
+  - 'Capability statements may be public only when phrased as scope, not guaranteed outcome.'
+  - 'Managed Secure claims remain evidence-gated until identity, storage, logging, revocation, backup/restore and incident controls are tested.'
+claims:
+  - id: CLM-0001
+    claim_text: 'Atlas AI provides governed AI solution packages for business workflows.'
+    claim_type: capability
+    evidence_ref: ADR-0004
+    owner: website_governance
+    approval_status: pending_review
+    review_date: '2026-06-08'
+    public_allowed: false
+  - id: CLM-0002
+    claim_text: 'Ordinary Wix forms are used for low-risk qualification only and should not receive confidential, restricted or regulated files.'
+    claim_type: privacy
+    evidence_ref: ADR-0004
+    owner: legal_security_governance
+    approval_status: pending_review
+    review_date: '2026-06-08'
+    public_allowed: false
+  - id: CLM-0003
+    claim_text: 'Atlas AI uses third-party AI platform lanes where appropriate; provider terms, data handling, retention and training policies vary by provider and delivery mode.'
+    claim_type: vendor
+    evidence_ref: docs/legal/provider-disclosure.md
+    owner: legal_governance
+    approval_status: pending_review
+    review_date: '2026-06-08'
+    public_allowed: false
+  - id: CLM-0004
+    claim_text: 'Vendor licenses and API usage are customer-owned, pass-through, prepaid or capped unless explicitly included in the order form.'
+    claim_type: pricing
+    evidence_ref: docs/legal/provider-disclosure.md
+    owner: commercial_governance
+    approval_status: pending_review
+    review_date: '2026-06-08'
+    public_allowed: false
+  - id: CLM-0005
+    claim_text: 'Managed Secure is for confidential and control-sensitive workflows.'
+    claim_type: capability
+    evidence_ref: docs/azure/secure-handoff-contract.schema.json
+    owner: security_governance
+    approval_status: pending_review
+    review_date: '2026-06-08'
+    public_allowed: false
+  - id: CLM-0006
+    claim_text: 'Managed Secure is active and production-ready.'
+    claim_type: security
+    evidence_ref: none
+    owner: security_governance
+    approval_status: rejected
+    review_date: '2026-06-08'
+    public_allowed: false
