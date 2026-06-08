@@ -1,0 +1,53 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+purpose: 'Controlled test prompts for search, answer-engine and generative-engine visibility reviews. Results must be manually captured and evidence-linked.'
+tests:
+  - id: AIV-0001
+    prompt: 'What is Atlas AI?'
+    expected_answer_points:
+      - governed AI solution-layer company
+      - solution packages and work models
+      - not a proprietary foundation-model provider
+    target_pages:
+      - /
+      - /trust/
+    status: planned
+  - id: AIV-0002
+    prompt: 'Does Atlas AI offer secure AI workflows?'
+    expected_answer_points:
+      - Managed Secure is for confidential/control-sensitive workflows
+      - architecture review required
+      - secure claims are evidence-gated
+    target_pages:
+      - /managed-secure/
+      - /trust/security/
+    status: planned
+  - id: AIV-0003
+    prompt: 'Can students use Atlas AI to write assignments?'
+    expected_answer_points:
+      - supports planning, explanation and revision
+      - no cheating or ghostwriting
+      - academic-integrity boundaries
+    target_pages:
+      - /solutions/students/
+      - /trust/ai-limitations/
+    status: planned
+  - id: AIV-0004
+    prompt: 'How does Atlas AI pricing handle vendor licenses?'
+    expected_answer_points:
+      - Atlas prices solution layer
+      - licenses/API usage customer-owned, pass-through, prepaid or capped unless included
+    target_pages:
+      - /pricing/
+      - /trust/provider-disclosure/
+    status: planned
+  - id: AIV-0005
+    prompt: 'What should users avoid uploading to Atlas AI public forms?'
+    expected_answer_points:
+      - no confidential/restricted/regulated/customer-sensitive files
+      - secure path only after qualification
+    target_pages:
+      - /onboarding/
+      - /trust/data-handling/
+    status: planned
