@@ -1,0 +1,38 @@
+name: Wix publication request
+description: Request governed Wix staging or production publication
+	title: '[WIX] '
+labels: ['wix', 'website', 'governance']
+body:
+  - type: input
+    id: wix_url
+    attributes:
+      label: Wix staging or preview URL
+    validations:
+      required: true
+  - type: textarea
+    id: source_files
+    attributes:
+      label: GitHub source files
+      description: List page-map, metadata, CMS, claims, FAQ, legal and checklist files used.
+    validations:
+      required: true
+  - type: textarea
+    id: qa_evidence
+    attributes:
+      label: QA evidence
+      description: Include screenshots, metadata checks, schema validation, mobile review, form tests and analytics tests.
+    validations:
+      required: true
+  - type: checkboxes
+    id: release_gate
+    attributes:
+      label: Release gate
+      options:
+        - label: Implementation register updated
+          required: true
+        - label: Claims and legal references reviewed
+          required: true
+        - label: No confidential upload path exposed through ordinary Wix form
+          required: true
+        - label: Release tag will not be created before evidence is complete
+          required: true
