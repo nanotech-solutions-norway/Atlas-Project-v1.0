@@ -1,0 +1,29 @@
+# Atlas AI
+
+Status: Draft public AI-readable summary for review
+Last updated: 2026-06-08
+Canonical domain: https://www.atlas-ai.no
+
+Atlas AI is a Norway-first governed AI solution-layer company. Atlas AI helps businesses, students and private users apply AI through structured solution packages, work models, onboarding, Trust Center guidance and controlled delivery boundaries.
+
+Primary public routes:
+
+- Home: https://www.atlas-ai.no/
+- Solutions: https://www.atlas-ai.no/solutions/
+- Business AI Work Solutions: https://www.atlas-ai.no/solutions/business-ai/
+- Student AI Study Solutions: https://www.atlas-ai.no/solutions/students/
+- Consumer AI Productivity Solutions: https://www.atlas-ai.no/solutions/consumers/
+- Managed Secure: https://www.atlas-ai.no/managed-secure/
+- Pricing: https://www.atlas-ai.no/pricing/
+- Trust Center: https://www.atlas-ai.no/trust/
+- Onboarding: https://www.atlas-ai.no/onboarding/
+- Contact: https://www.atlas-ai.no/contact/
+- Legal: https://www.atlas-ai.no/legal/
+
+Business/professional buyers are the primary commercial audience. Students and private consumers are secondary controlled lanes with explicit guardrails.
+
+Atlas AI does not present itself as a proprietary foundation-model company, official vendor partner, custom-GPT storefront or vendor-branded product reseller. Provider names are explanatory platform lanes only.
+
+Ordinary public forms are for low-risk qualification only. Confidential, restricted, regulated or customer-sensitive materials must not be submitted through public forms. Managed Secure and secure intake require separate qualification and validated secure-path controls.
+
+AI outputs may be incomplete or inaccurate and require human review before reliance, publication, submission or operational use.
