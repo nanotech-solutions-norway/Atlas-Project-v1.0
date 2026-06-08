@@ -1,0 +1,40 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+rules:
+  - 'Evidence entries must not contain secrets, credentials, customer confidential material or protected package logic.'
+  - 'Wix publication evidence must include URL/screenshot or exported validation reference before release tagging.'
+  - 'Security and Managed Secure evidence may record control status only; detailed sensitive logs must not be committed.'
+evidence:
+  - id: EVD-0001
+    title: 'ADR-0004 SEO/AEO/GEO governance decision'
+    type: governance_record
+    source_path: docs/adr/ADR-0004-atlas-ai-website-seo-aeo-geo-governance.md
+    related_claims: [CLM-0001, CLM-0002]
+    status: pending_review
+    owner: website_governance
+    review_date: '2026-06-08'
+  - id: EVD-0002
+    title: 'Provider disclosure draft'
+    type: legal_disclosure
+    source_path: docs/legal/provider-disclosure.md
+    related_claims: [CLM-0003, CLM-0004]
+    status: pending_legal_review
+    owner: legal_governance
+    review_date: '2026-06-08'
+  - id: EVD-0003
+    title: 'Secure handoff contract placeholder'
+    type: secure_path_contract
+    source_path: docs/azure/secure-handoff-contract.schema.json
+    related_claims: [CLM-0005]
+    status: planned
+    owner: security_governance
+    review_date: '2026-06-08'
+  - id: EVD-0004
+    title: 'Wix staging evidence for SEO/AEO/GEO launch pages'
+    type: wix_staging_evidence
+    source_path: pending
+    related_claims: []
+    status: missing_required_before_release
+    owner: website_governance
+    review_date: '2026-06-08'
