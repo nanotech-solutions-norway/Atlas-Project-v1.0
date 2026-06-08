@@ -1,0 +1,57 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+canonical_domain: 'https://www.atlas-ai.no'
+rules:
+  - 'Routes must not be renamed without change-control entry.'
+  - 'Bokmål root and English /en/ equivalents must remain reciprocal unless an approved exception exists.'
+  - 'Managed Secure routes are evidence-gated and must not imply active secure delivery before controls are validated.'
+routes:
+  - route: /
+    route_type: static
+    locale: nb_NO
+    owner: website_governance
+    source_registers: [page-map, metadata-register, hreflang-register]
+    wix_status: pending_editor_validation
+  - route: /en/
+    route_type: static
+    locale: en
+    owner: website_governance
+    source_registers: [page-map, metadata-register, hreflang-register]
+    wix_status: pending_editor_validation
+  - route: /solutions/
+    route_type: cms_listing
+    locale: nb_NO
+    owner: content_governance
+    source_registers: [page-map, sitemap, keyword-map, cms-schema]
+    wix_status: planned
+  - route: /solutions/business-ai/
+    route_type: static_or_cms
+    locale: nb_NO
+    owner: content_governance
+    source_registers: [keyword-map, metadata-register, claims-registry]
+    wix_status: planned
+  - route: /managed-secure/
+    route_type: static
+    locale: nb_NO
+    owner: security_governance
+    source_registers: [claims-registry, secure-handoff-contract, legal-provider-disclosure]
+    wix_status: evidence_gated
+  - route: /pricing/
+    route_type: static_or_cms
+    locale: nb_NO
+    owner: commercial_governance
+    source_registers: [pricing_plans, provider-disclosure, claims-registry]
+    wix_status: planned
+  - route: /trust/
+    route_type: trust_center
+    locale: nb_NO
+    owner: legal_security_governance
+    source_registers: [trust_topics, claims-registry, legal-doc-register]
+    wix_status: planned
+  - route: /onboarding/
+    route_type: form
+    locale: nb_NO
+    owner: operations_governance
+    source_registers: [onboarding_routes, secure-handoff-contract, event-taxonomy]
+    wix_status: planned
