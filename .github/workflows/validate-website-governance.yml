@@ -1,0 +1,107 @@
+name: Validate website governance
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'cms-seeds/**'
+      - '.github/**'
+      - 'llms.txt'
+      - 'robots-policy-reference.md'
+  workflow_dispatch:
+
+jobs:
+  governance-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          paths = [
+              Path('docs/cms/schema.json'),
+              Path('docs/azure/secure-handoff-contract.schema.json'),
+          ]
+          for path in paths:
+              if not path.exists():
+                  raise SystemExit(f'Missing required JSON file: {path}')
+              with path.open('r', encoding='utf-8') as f:
+                  json.load(f)
+              print(f'JSON OK: {path}')
+          PY
+
+      - name: Check required governance files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required = [
+              'docs/adr/ADR-0004-atlas-ai-website-seo-aeo-geo-governance.md',
+              'docs/seo/keyword-map.yml',
+              'docs/seo/content-clusters.yml',
+              'docs/seo/internal-link-map.yml',
+              'docs/seo/metadata-register.yml',
+              'docs/seo/hreflang-register.yml',
+              'docs/seo/aeo-faq-register.yml',
+              'docs/seo/geo-entity-register.yml',
+              'docs/seo/ai-visibility-test-set.yml',
+              'docs/website/sitemap.yml',
+              'docs/website/page-map.yml',
+              'docs/website/wix-page-build-checklist.md',
+              'docs/website/launch-qa-checklist.md',
+              'docs/cms/schema.json',
+              'docs/claims/claims-registry.yml',
+              'docs/legal/provider-disclosure.md',
+              'docs/legal/ai-output-disclaimer.md',
+              'docs/analytics/event-taxonomy.yml',
+              'docs/azure/secure-handoff-contract.schema.json',
+              'llms.txt',
+              'robots-policy-reference.md',
+              '.github/CODEOWNERS',
+              '.github/pull_request_template.md',
+          ]
+          missing = [p for p in required if not Path(p).exists()]
+          if missing:
+              raise SystemExit('Missing governance files: ' + ', '.join(missing))
+          print('Required governance files present.')
+          PY
+
+      - name: Check public wording guardrails
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          blocked = [
+              'Atlas GPT',
+              'ChatGPT Atlas',
+              'official OpenAI partner',
+              'guaranteed accuracy',
+              'writes your assignments',
+          ]
+          scan_paths = []
+          for pattern in ['docs/seo/**/*.yml', 'docs/website/**/*.yml', 'docs/website/**/*.md', 'llms.txt']:
+              scan_paths.extend(Path('.').glob(pattern))
+          hits = []
+          for path in scan_paths:
+              text = path.read_text(encoding='utf-8')
+              for phrase in blocked:
+                  if phrase.lower() in text.lower():
+                      hits.append(f'{path}: {phrase}')
+          if hits:
+              raise SystemExit('Blocked public wording found:\n' + '\n'.join(hits))
+          print('Public wording guardrails OK.')
+          PY
+
+      - name: Check safe-form notice exists
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          haystack = '\n'.join(p.read_text(encoding='utf-8') for p in [Path('docs/website/launch-qa-checklist.md'), Path('docs/website/wix-page-build-checklist.md'), Path('llms.txt')])
+          required_phrases = ['confidential', 'public forms', 'secure path']
+          missing = [phrase for phrase in required_phrases if phrase.lower() not in haystack.lower()]
+          if missing:
+              raise SystemExit('Missing safe-form notice concepts: ' + ', '.join(missing))
+          print('Safe-form notice concepts present.')
+          PY
