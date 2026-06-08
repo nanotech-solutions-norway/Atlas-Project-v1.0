@@ -3,7 +3,7 @@
 Status: Proposed for review
 Date: 2026-06-08
 Phase: 1 - Commercial Shell, GitHub Control Plane, and Gamma Alignment
-Issue: #4
+Issue: #6
 
 ## Context
 
