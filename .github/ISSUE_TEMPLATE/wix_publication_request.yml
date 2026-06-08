@@ -1,6 +1,6 @@
 name: Wix publication request
 description: Request governed Wix staging or production publication
-	title: '[WIX] '
+title: '[WIX] '
 labels: ['wix', 'website', 'governance']
 body:
   - type: input
