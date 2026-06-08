@@ -1,0 +1,63 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+rules:
+  - 'Legal and trust documents must be versioned and linked from relevant forms, footer, Trust Center and pricing pages.'
+  - 'Draft documents are not approved public legal copy until legal/commercial review is complete.'
+documents:
+  - id: LEG-0001
+    doc_name: Terms
+    version: draft
+    effective_date: null
+    canonical_path: /legal/terms/
+    owner: legal_governance
+    legal_review_status: draft_required
+  - id: LEG-0002
+    doc_name: Privacy Policy
+    version: draft
+    effective_date: null
+    canonical_path: /legal/privacy-policy/
+    owner: legal_governance
+    legal_review_status: draft_required
+  - id: LEG-0003
+    doc_name: Cookie Policy
+    version: draft
+    effective_date: null
+    canonical_path: /legal/cookie-policy/
+    owner: legal_governance
+    legal_review_status: draft_required
+  - id: LEG-0004
+    doc_name: DPA / Business Terms
+    version: draft
+    effective_date: null
+    canonical_path: /legal/dpa-business-terms/
+    owner: legal_governance
+    legal_review_status: draft_required
+  - id: LEG-0005
+    doc_name: Acceptable Use Policy
+    version: draft
+    effective_date: null
+    canonical_path: /legal/acceptable-use-policy/
+    owner: legal_governance
+    legal_review_status: draft_required
+  - id: LEG-0006
+    doc_name: Provider Disclosure
+    version: draft-2026-06-08
+    effective_date: null
+    canonical_path: /trust/provider-disclosure/
+    owner: legal_governance
+    legal_review_status: draft_for_review
+  - id: LEG-0007
+    doc_name: AI Output Disclaimer
+    version: draft-2026-06-08
+    effective_date: null
+    canonical_path: /trust/ai-limitations/
+    owner: legal_governance
+    legal_review_status: draft_for_review
+  - id: LEG-0008
+    doc_name: Accessibility Statement
+    version: draft
+    effective_date: null
+    canonical_path: /legal/accessibility-statement/
+    owner: legal_governance
+    legal_review_status: draft_required

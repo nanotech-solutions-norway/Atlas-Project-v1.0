@@ -1,0 +1,68 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+rules:
+  - 'Every public route must have at least one contextual link to a Trust Center or Legal page where risk, data handling or provider claims are present.'
+  - 'Resources should link back to relevant package, pricing and trust pages.'
+  - 'Student pages must link to responsible-use guidance.'
+  - 'Consumer pages must link to privacy and safe-use exclusions.'
+links:
+  - from: /
+    to:
+      - /solutions/
+      - /pricing/
+      - /trust/
+      - /onboarding/
+      - /resources/
+    status: planned
+  - from: /solutions/
+    to:
+      - /solutions/business-ai/
+      - /solutions/students/
+      - /solutions/consumers/
+      - /managed-secure/
+      - /pricing/
+      - /trust/
+    status: planned
+  - from: /solutions/business-ai/
+    to:
+      - /solutions/team-workspace/
+      - /managed-secure/
+      - /pricing/
+      - /trust/
+      - /onboarding/
+    status: planned
+  - from: /solutions/students/
+    to:
+      - /resources/responsible-ai-study-use/
+      - /trust/ai-limitations/
+      - /pricing/student-packages/
+      - /onboarding/
+    status: planned
+  - from: /solutions/consumers/
+    to:
+      - /trust/privacy/
+      - /trust/ai-limitations/
+      - /pricing/individual-packages/
+      - /onboarding/
+    status: planned
+  - from: /managed-secure/
+    to:
+      - /trust/security/
+      - /trust/data-handling/
+      - /trust/provider-disclosure/
+      - /contact/
+    status: evidence_gated
+  - from: /pricing/
+    to:
+      - /trust/provider-disclosure/
+      - /trust/ai-limitations/
+      - /onboarding/
+      - /contact/
+    status: planned
+  - from: /trust/
+    to:
+      - /legal/
+      - /managed-secure/
+      - /contact/
+    status: planned

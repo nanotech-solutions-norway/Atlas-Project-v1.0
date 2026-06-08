@@ -1,0 +1,124 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+canonical_domain: 'https://www.atlas-ai.no'
+default_locale: nb_NO
+secondary_locale: en
+routes:
+  - route: /
+    language: nb_NO
+    page_type: homepage
+    cms_collection: null
+    owner: website_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/'
+    hreflang_peer: /en/
+    launch_gate: staging_evidence_required
+  - route: /en/
+    language: en
+    page_type: homepage
+    cms_collection: null
+    owner: website_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/en/'
+    hreflang_peer: /
+    launch_gate: staging_evidence_required
+  - route: /solutions/
+    language: nb_NO
+    page_type: hub
+    cms_collection: packages
+    owner: content_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/solutions/'
+    hreflang_peer: /en/solutions/
+    launch_gate: cms_and_metadata_review
+  - route: /solutions/business-ai/
+    language: nb_NO
+    page_type: landing_page
+    cms_collection: packages
+    owner: content_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/solutions/business-ai/'
+    hreflang_peer: /en/solutions/business-ai/
+    launch_gate: claims_and_metadata_review
+  - route: /solutions/students/
+    language: nb_NO
+    page_type: landing_page
+    cms_collection: packages
+    owner: content_governance
+    status: guardrail_review_required
+    canonical: 'https://www.atlas-ai.no/solutions/students/'
+    hreflang_peer: /en/solutions/students/
+    launch_gate: academic_integrity_review
+  - route: /solutions/consumers/
+    language: nb_NO
+    page_type: landing_page
+    cms_collection: packages
+    owner: content_governance
+    status: guardrail_review_required
+    canonical: 'https://www.atlas-ai.no/solutions/consumers/'
+    hreflang_peer: /en/solutions/consumers/
+    launch_gate: consumer_safety_review
+  - route: /managed-secure/
+    language: nb_NO
+    page_type: landing_page
+    cms_collection: trust_topics
+    owner: security_governance
+    status: evidence_gated
+    canonical: 'https://www.atlas-ai.no/managed-secure/'
+    hreflang_peer: /en/managed-secure/
+    launch_gate: secure_claims_evidence_required
+  - route: /pricing/
+    language: nb_NO
+    page_type: pricing
+    cms_collection: pricing_plans
+    owner: commercial_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/pricing/'
+    hreflang_peer: /en/pricing/
+    launch_gate: commercial_review
+  - route: /trust/
+    language: nb_NO
+    page_type: trust_center
+    cms_collection: trust_topics
+    owner: legal_security_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/trust/'
+    hreflang_peer: /en/trust/
+    launch_gate: claims_and_legal_review
+  - route: /onboarding/
+    language: nb_NO
+    page_type: intake
+    cms_collection: onboarding_routes
+    owner: operations_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/onboarding/'
+    hreflang_peer: /en/onboarding/
+    launch_gate: safe_form_validation
+  - route: /resources/
+    language: nb_NO
+    page_type: resources_hub
+    cms_collection: resources
+    owner: content_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/resources/'
+    hreflang_peer: /en/resources/
+    launch_gate: metadata_and_internal_links
+  - route: /contact/
+    language: nb_NO
+    page_type: contact
+    cms_collection: onboarding_routes
+    owner: operations_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/contact/'
+    hreflang_peer: /en/contact/
+    launch_gate: form_and_analytics_validation
+  - route: /legal/
+    language: nb_NO
+    page_type: legal_hub
+    cms_collection: legal_docs
+    owner: legal_governance
+    status: planned
+    canonical: 'https://www.atlas-ai.no/legal/'
+    hreflang_peer: /en/legal/
+    launch_gate: legal_review

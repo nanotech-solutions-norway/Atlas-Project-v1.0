@@ -1,0 +1,49 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+rules:
+  title_max_chars: 60
+  meta_description_target_chars: '110-155'
+  h1_required: true
+  unique_title_required: true
+records:
+  - route: /
+    language: nb_NO
+    title: 'Atlas AI | Styrte AI-løsninger for arbeid'
+    meta_description: 'Atlas AI hjelper virksomheter, studenter og private brukere med styrte AI-pakker, klare arbeidsflyter og praktisk onboarding.'
+    h1: 'Styrte AI-løsninger for arbeid, studier og hverdagsoppgaver'
+    status: draft
+    reviewer: content_governance
+    last_reviewed: '2026-06-08'
+  - route: /en/
+    language: en
+    title: 'Atlas AI | Governed AI Solutions for Work'
+    meta_description: 'Atlas AI helps businesses, students and private users apply AI through governed solution packages, practical workflows and onboarding.'
+    h1: 'Governed AI solutions for work, study and everyday productivity'
+    status: draft
+    reviewer: content_governance
+    last_reviewed: '2026-06-08'
+  - route: /solutions/business-ai/
+    language: en
+    title: 'Business AI Work Solutions | Atlas AI'
+    meta_description: 'Governed AI workflow packages for professionals, SMBs and teams that need clearer work processes, onboarding and human review.'
+    h1: 'Business AI work solutions'
+    status: draft
+    reviewer: content_governance
+    last_reviewed: '2026-06-08'
+  - route: /managed-secure/
+    language: en
+    title: 'Managed Secure AI Workflows | Atlas AI'
+    meta_description: 'Managed Secure is the controlled route for confidential and control-sensitive AI workflows after architecture review and evidence validation.'
+    h1: 'Managed Secure for control-sensitive AI workflows'
+    status: evidence_gated
+    reviewer: security_governance
+    last_reviewed: '2026-06-08'
+  - route: /trust/
+    language: en
+    title: 'Trust Center | Atlas AI'
+    meta_description: 'Review Atlas AI data handling, provider disclosure, AI limitations, security boundaries and responsible-use principles before onboarding.'
+    h1: 'Atlas AI Trust Center'
+    status: draft
+    reviewer: legal_security_governance
+    last_reviewed: '2026-06-08'

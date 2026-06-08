@@ -1,0 +1,26 @@
+# Atlas repository ownership model
+
+# Governance and architecture
+/docs/architecture/ @nanotech-solutions-norway
+/docs/adr/ @nanotech-solutions-norway
+/docs/governance/ @nanotech-solutions-norway
+
+# SEO/AEO/GEO and website governance
+/docs/seo/ @nanotech-solutions-norway
+/docs/website/ @nanotech-solutions-norway
+/docs/cms/ @nanotech-solutions-norway
+
+# Claims, legal, trust and security
+/docs/claims/ @nanotech-solutions-norway
+/docs/legal/ @nanotech-solutions-norway
+/docs/azure/ @nanotech-solutions-norway
+
+# Analytics and implementation evidence
+/docs/analytics/ @nanotech-solutions-norway
+/docs/implementation/ @nanotech-solutions-norway
+
+# GitHub automation and review templates
+/.github/ @nanotech-solutions-norway
+
+# CMS seeds and public package data
+/cms-seeds/ @nanotech-solutions-norway

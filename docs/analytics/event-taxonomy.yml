@@ -1,0 +1,59 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+consent_rule: 'Analytics must respect consent, retention and applicable privacy controls.'
+events:
+  - event_name: package_view
+    trigger: 'User views a package detail page or package CMS record route.'
+    page_scope: '/solutions/*, /packages/*'
+    consent_category: analytics
+    parameter_schema:
+      package_id: string
+      segment: string
+      language: string
+    owner: analytics_governance
+  - event_name: pricing_view
+    trigger: 'User views pricing page or package pricing section.'
+    page_scope: '/pricing/*'
+    consent_category: analytics
+    parameter_schema:
+      pricing_plan_id: string
+      segment: string
+      language: string
+    owner: analytics_governance
+  - event_name: trust_pack_download
+    trigger: 'User clicks a Trust Center download or trust-pack CTA.'
+    page_scope: '/trust/*'
+    consent_category: analytics
+    parameter_schema:
+      trust_topic_id: string
+      document_id: string
+      language: string
+    owner: legal_security_governance
+  - event_name: onboarding_start
+    trigger: 'User starts an onboarding or qualification form.'
+    page_scope: '/onboarding/*, /contact/*'
+    consent_category: analytics
+    parameter_schema:
+      route_slug: string
+      selected_package: string
+      customer_segment: string
+    owner: operations_governance
+  - event_name: form_submit_low_risk
+    trigger: 'User submits low-risk qualification form without file upload.'
+    page_scope: '/onboarding/*, /contact/*'
+    consent_category: functional
+    parameter_schema:
+      route_slug: string
+      risk_class: string
+      secure_required: boolean
+    owner: operations_governance
+  - event_name: architecture_review_request
+    trigger: 'User requests architecture review for Managed Secure or control-sensitive workflow.'
+    page_scope: '/managed-secure/*, /trust/*, /contact/*'
+    consent_category: functional
+    parameter_schema:
+      route_slug: string
+      data_category: string
+      secure_required: boolean
+    owner: security_governance

@@ -1,0 +1,48 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+canonical_domain: 'https://www.atlas-ai.no'
+site_tree:
+  - route: /
+    title: Home
+    children:
+      - route: /solutions/
+        title: Solutions
+        children:
+          - route: /solutions/business-ai/
+            title: Business AI Work Solutions
+          - route: /solutions/students/
+            title: Student AI Study Solutions
+          - route: /solutions/consumers/
+            title: Consumer AI Productivity Solutions
+          - route: /solutions/team-workspace/
+            title: Team Workspace
+      - route: /managed-secure/
+        title: Managed Secure
+      - route: /pricing/
+        title: Pricing
+      - route: /trust/
+        title: Trust Center
+        children:
+          - route: /trust/privacy/
+            title: Privacy
+          - route: /trust/security/
+            title: Security
+          - route: /trust/responsible-ai/
+            title: Responsible AI
+          - route: /trust/provider-disclosure/
+            title: Provider Disclosure
+          - route: /trust/ai-limitations/
+            title: AI Limitations
+          - route: /trust/data-handling/
+            title: Data Handling
+      - route: /onboarding/
+        title: Onboarding
+      - route: /resources/
+        title: Resources
+      - route: /about/
+        title: About
+      - route: /contact/
+        title: Contact
+      - route: /legal/
+        title: Legal

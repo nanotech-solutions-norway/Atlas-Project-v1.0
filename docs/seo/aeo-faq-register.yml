@@ -1,0 +1,48 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+rules:
+  - 'Short answer first, then expanded answer.'
+  - 'FAQPage schema may be used only where the FAQ content is visible to users and eligible.'
+  - 'No answer may overpromise, imply regulatory decision-making or make unsupported security claims.'
+faqs:
+  - id: FAQ-0001
+    question: 'What is Atlas AI?'
+    short_answer: 'Atlas AI is a governed AI solution-layer company that helps users apply AI through structured packages, workflows and onboarding.'
+    long_answer: 'Atlas AI designs and supports practical AI work models for business, study and everyday productivity. It uses third-party AI platforms where appropriate, while governing scope, data handling, limitations and human-review boundaries.'
+    schema_eligible: true
+    related_page: /
+    claim_refs: [CLM-0001]
+    review_date: '2026-06-08'
+  - id: FAQ-0002
+    question: 'When is Managed Secure required?'
+    short_answer: 'Managed Secure is considered when a workflow involves confidential, restricted, regulated or control-sensitive material.'
+    long_answer: 'Ordinary website forms are limited to low-risk qualification. If confidential files, protected artifacts, private workspace logic or restricted data are needed, the request must move through architecture review and a controlled secure path.'
+    schema_eligible: true
+    related_page: /managed-secure/
+    claim_refs: [CLM-0002, CLM-0005]
+    review_date: '2026-06-08'
+  - id: FAQ-0003
+    question: 'Does Atlas AI include vendor licenses?'
+    short_answer: 'Vendor licenses and API usage are customer-owned, pass-through, prepaid or capped unless explicitly included in the order form.'
+    long_answer: 'Atlas prices the solution layer: configuration, workflow design, onboarding, documentation and support. The AI platform runtime may be customer-owned or explicitly passed through depending on the selected package and commercial terms.'
+    schema_eligible: true
+    related_page: /pricing/
+    claim_refs: [CLM-0004]
+    review_date: '2026-06-08'
+  - id: FAQ-0004
+    question: 'Can students use Atlas AI for assignments?'
+    short_answer: 'Atlas AI student packages support planning, explanation, revision and responsible source use; they must not be used for cheating or direct assignment submission.'
+    long_answer: 'Student packages should help users learn, structure revision and understand concepts. They must not be positioned as ghostwriting, hidden answer generation or academic-integrity bypass tools.'
+    schema_eligible: true
+    related_page: /solutions/students/
+    claim_refs: []
+    review_date: '2026-06-08'
+  - id: FAQ-0005
+    question: 'What should users not submit through Atlas AI public forms?'
+    short_answer: 'Users should not submit confidential, restricted, regulated, customer-sensitive or special-category data through ordinary public forms.'
+    long_answer: 'Public forms are intended for commercial qualification and routing. Sensitive material is collected only after qualification through a controlled secure path when such a path is approved and available.'
+    schema_eligible: true
+    related_page: /onboarding/
+    claim_refs: [CLM-0002]
+    review_date: '2026-06-08'

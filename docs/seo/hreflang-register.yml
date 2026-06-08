@@ -1,0 +1,69 @@
+status: proposed_for_review
+updated: '2026-06-08'
+owner_system: GitHub
+canonical_domain: 'https://www.atlas-ai.no'
+route_pairs:
+  - id: HREF-0001
+    nb_NO: /
+    en: /en/
+    canonical_nb_NO: 'https://www.atlas-ai.no/'
+    canonical_en: 'https://www.atlas-ai.no/en/'
+    status: draft
+  - id: HREF-0002
+    nb_NO: /solutions/
+    en: /en/solutions/
+    canonical_nb_NO: 'https://www.atlas-ai.no/solutions/'
+    canonical_en: 'https://www.atlas-ai.no/en/solutions/'
+    status: planned
+  - id: HREF-0003
+    nb_NO: /solutions/business-ai/
+    en: /en/solutions/business-ai/
+    canonical_nb_NO: 'https://www.atlas-ai.no/solutions/business-ai/'
+    canonical_en: 'https://www.atlas-ai.no/en/solutions/business-ai/'
+    status: planned
+  - id: HREF-0004
+    nb_NO: /solutions/students/
+    en: /en/solutions/students/
+    canonical_nb_NO: 'https://www.atlas-ai.no/solutions/students/'
+    canonical_en: 'https://www.atlas-ai.no/en/solutions/students/'
+    status: guardrail_review_required
+  - id: HREF-0005
+    nb_NO: /solutions/consumers/
+    en: /en/solutions/consumers/
+    canonical_nb_NO: 'https://www.atlas-ai.no/solutions/consumers/'
+    canonical_en: 'https://www.atlas-ai.no/en/solutions/consumers/'
+    status: guardrail_review_required
+  - id: HREF-0006
+    nb_NO: /managed-secure/
+    en: /en/managed-secure/
+    canonical_nb_NO: 'https://www.atlas-ai.no/managed-secure/'
+    canonical_en: 'https://www.atlas-ai.no/en/managed-secure/'
+    status: evidence_gated
+  - id: HREF-0007
+    nb_NO: /pricing/
+    en: /en/pricing/
+    canonical_nb_NO: 'https://www.atlas-ai.no/pricing/'
+    canonical_en: 'https://www.atlas-ai.no/en/pricing/'
+    status: planned
+  - id: HREF-0008
+    nb_NO: /trust/
+    en: /en/trust/
+    canonical_nb_NO: 'https://www.atlas-ai.no/trust/'
+    canonical_en: 'https://www.atlas-ai.no/en/trust/'
+    status: planned
+  - id: HREF-0009
+    nb_NO: /onboarding/
+    en: /en/onboarding/
+    canonical_nb_NO: 'https://www.atlas-ai.no/onboarding/'
+    canonical_en: 'https://www.atlas-ai.no/en/onboarding/'
+    status: planned
+  - id: HREF-0010
+    nb_NO: /contact/
+    en: /en/contact/
+    canonical_nb_NO: 'https://www.atlas-ai.no/contact/'
+    canonical_en: 'https://www.atlas-ai.no/en/contact/'
+    status: planned
+validation_rules:
+  - 'Every published route must have a reciprocal hreflang pair or an approved single-locale exception.'
+  - 'Do not use automatic region redirects that block crawlers from alternate language pages.'
+  - 'Canonical URLs must match the active atlas-ai.no domain unless a later approved domain ADR changes it.'
