@@ -50,10 +50,12 @@ jobs:
               'docs/seo/ai-visibility-test-set.yml',
               'docs/website/sitemap.yml',
               'docs/website/page-map.yml',
+              'docs/website/route-map.yml',
               'docs/website/wix-page-build-checklist.md',
               'docs/website/launch-qa-checklist.md',
               'docs/cms/schema.json',
               'docs/claims/claims-registry.yml',
+              'docs/legal/legal-doc-register.yml',
               'docs/legal/provider-disclosure.md',
               'docs/legal/ai-output-disclaimer.md',
               'docs/analytics/event-taxonomy.yml',
@@ -62,6 +64,8 @@ jobs:
               'robots-policy-reference.md',
               '.github/CODEOWNERS',
               '.github/pull_request_template.md',
+              '.github/ISSUE_TEMPLATE/seo_content_request.yml',
+              '.github/ISSUE_TEMPLATE/wix_publication_request.yml',
           ]
           missing = [p for p in required if not Path(p).exists()]
           if missing:
