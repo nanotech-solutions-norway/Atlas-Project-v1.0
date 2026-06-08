@@ -1,7 +1,7 @@
 # Atlas Implementation Register
 
 Status: Active implementation register
-Date: 2026-05-02
+Date: 2026-06-08
 Phase: 1 - Commercial Shell, GitHub Control Plane, and Gamma Alignment
 
 ## Purpose
@@ -17,6 +17,7 @@ This register is the cross-platform control document for Atlas implementation. I
 - Domeneshop is DNS-only unless a separate decision changes that scope.
 - Product package names, package IDs, routes, and CMS seeds must not be renamed without change-control entry.
 - Wix page/layout work must distinguish between API-validated data/form state and editor-validated visual/page state.
+- SEO/AEO/GEO page, metadata, FAQ, entity, claims and release records must be governed through GitHub before Wix publication.
 
 ## Status values
 
@@ -42,11 +43,17 @@ This register is the cross-platform control document for Atlas implementation. I
 | ATL-0007 | Gamma | Atlas Project folder | Gamma | 1 | Blocked | `docs/gamma/phase-1-gamma-reference-register.md`; folder ID `2pc6vh0les2sgcf` | Add exact Gamma URLs or IDs before Phase 1 closure. |
 | ATL-0008 | Azure | Secure control plane | Azure | 3 | Not started | User-confirmed not started | Create landing-zone ADR only when Phase 3 starts. |
 | ATL-0009 | Domeneshop | DNS to GitHub | Domeneshop | 1 | In progress | User-confirmed DNS connection | Manually verify records and HTTPS. |
-| ATL-0010 | Product | Wave 1 package definitions | GitHub / Wix | 0.5 | Validated | `docs/product/phase-0-5-wave-1-package-cards.md`; PR #2 merged | Use as source for Phase 1 Wix package pages. |
-| ATL-0011 | Wix CMS seed | ProductPackages collection seed | GitHub / Wix | 1 | Validated | `docs/wix/phase-1-wix-cms-validation-evidence.md`; 5 records inserted, 0 failures | Bind `ProductPackages` to package pages. |
+| ATL-0010 | Product | Wave 1 package definitions | GitHub / Wix | 0.5 | Validated | `docs/product/phase-0-5-wave-1-package-cards.md`; PR #2 merged | Reconcile package names against updated provider-brand naming policy. |
+| ATL-0011 | Wix CMS seed | ProductPackages collection seed | GitHub / Wix | 1 | Validated | `docs/wix/phase-1-wix-cms-validation-evidence.md`; 5 records inserted, 0 failures | Bind `ProductPackages` to package pages after naming review. |
 | ATL-0012 | Wix Forms / onboarding | Wave 1 onboarding field map | GitHub / Wix | 1 | Validated | `docs/wix/phase-1-wix-intake-form-evidence.md`; form ID `01dc5dc1-56d2-4ee6-8496-6700da326afb` | Place form on intake/onboarding page and link package CTAs. |
 | ATL-0013 | GitHub | Phase 0.5 completion checklist | GitHub | 0.5 | Validated | `docs/governance/phase-0-5-completion-checklist.md`; PR #2 merged | Closed. |
 | ATL-0014 | Wix | Wave 1 package page blueprint | Wix / GitHub | 1 | Validated | `docs/wix/phase-1-package-page-blueprint.md` | Implement/validate pages in Wix editor. |
+| ATL-0015 | GitHub | ADR-0004 SEO/AEO/GEO governance | GitHub | 1 | In progress | `docs/adr/ADR-0004-atlas-ai-website-seo-aeo-geo-governance.md`; Issue #4 | Review and merge before Wix publication. |
+| ATL-0016 | GitHub | SEO/AEO/GEO registers | GitHub | 1 | In progress | `docs/seo/*`, `docs/website/*`, `docs/cms/schema.json`, `docs/claims/claims-registry.yml` | Validate and expand records during Wix page build. |
+| ATL-0017 | GitHub | Legal/trust disclosure drafts | GitHub | 1/6 | In progress | `docs/legal/provider-disclosure.md`; `docs/legal/ai-output-disclaimer.md` | Legal/commercial review required before public use. |
+| ATL-0018 | GitHub | Secure handoff contract placeholder | GitHub / Azure | 2/3 | Planned | `docs/azure/secure-handoff-contract.schema.json` | Do not activate Azure until secure use case is selected. |
+| ATL-0019 | GitHub | Website governance templates and CODEOWNERS | GitHub | 1 | In progress | `.github/CODEOWNERS`; `.github/pull_request_template.md`; `.github/ISSUE_TEMPLATE/*` | Verify GitHub template rendering and branch rules manually if required. |
+| ATL-0020 | GitHub | Public AI-readable and robots policy references | GitHub / Wix | 1/5 | Planned | `llms.txt`; `robots-policy-reference.md` | Review before exposing public files on active Wix domain. |
 
 ## Required fields for future entries
 
@@ -67,4 +74,8 @@ Review this register at the start and end of every phase. Do not close a phase u
 
 ## Phase 1 note
 
-Phase 1 has started. The Wix CMS and form layers have been API-validated. Visual Wix page implementation, package-page binding, menu placement, exact Gamma deck registration, GitHub Pages/custom-domain verification, and Domeneshop DNS/HTTPS verification remain open before Phase 1 can fully close.
+Phase 1 has started. The Wix CMS and form layers have been API-validated. Visual Wix page implementation, package-page binding, menu placement, exact Gamma deck registration, GitHub Pages/custom-domain verification, Domeneshop DNS/HTTPS verification and SEO/AEO/GEO staging evidence remain open before Phase 1 can fully close.
+
+## Current implementation warning
+
+Earlier package names and route names include vendor-adjacent terms such as `Copilot`. The updated SEO/AEO/GEO governance plan requires provider names to be explanatory platform lanes, not Atlas-owned product names. Rename/remediation must be handled through change control before final Wix publication.
