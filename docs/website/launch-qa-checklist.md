@@ -42,6 +42,7 @@ Do not tag a website release or publish from Wix production until each applicabl
 - [ ] Public forms include no-confidential-upload warning.
 - [ ] Forms do not request confidential, restricted, regulated or customer-sensitive files.
 - [ ] Architecture-review path is available for secure-required cases.
+- [ ] Secure path routing is documented for cases where confidential, restricted, regulated or customer-sensitive material is required after qualification.
 - [ ] Confirmation copy is reviewed in Bokmål and English.
 - [ ] Form event tracking is consent-aware.
 
