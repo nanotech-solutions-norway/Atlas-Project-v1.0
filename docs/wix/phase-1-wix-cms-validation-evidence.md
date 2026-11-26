@@ -6,6 +6,8 @@ Owner system: Wix / GitHub
 Target site: Atlas Project V1
 Wix site ID: `bb5ac407-bcbb-451f-a2ad-65459e47b8d4`
 
+> **Historical evidence snapshot:** The following record preserves the package labels, stable IDs, Wix record IDs, and values read during the earlier CMS validation. It predates the ATLASPROJECT-8 source migration and is not the current package-name authority. No Wix CMS record was changed by this work. Current names and routes are governed by the ATLASPROJECT-8 change-control crosswalk in `docs/governance/naming-conventions.md`.
+
 ## Objective
 
 Validate and populate the Phase 1 Wix `ProductPackages` CMS collection using the Wave 1 package definitions created in Phase 0.5.

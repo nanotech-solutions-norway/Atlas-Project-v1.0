@@ -13,7 +13,7 @@ This document converts the Atlas Wave 1 portfolio recommendation into stable pac
 
 - Phase 0 governance baseline is merged into `main`.
 - Phase 0.5 objective is to finalize Wave 1 package definitions before final Wix package pages are built.
-- Wave 1 is limited to five launch candidates: Executive Work Copilot, Commercial Growth Copilot, Accounting & Bookkeeping Expert, Study Planner & Exam Coach, and Personal Life Organizer.
+- Wave 1 is limited to five launch candidates: Executive Work Assistant, Commercial Growth Assistant, Accounting & Bookkeeping Expert, Study Planner & Exam Coach, and Personal Life Organizer.
 - Managed Secure Mode remains a later delivery tier and must not be claimed as deployed.
 
 ## Delivery tier definitions
@@ -26,15 +26,15 @@ This document converts the Atlas Wave 1 portfolio recommendation into stable pac
 
 ---
 
-## Package card: Executive Work Copilot
+## Package card: Executive Work Assistant
 
 | Field | Value |
 |---|---|
 | Package ID | `PKG-BIZ-EXEC-WORK-COPILOT` |
-| Public name | Executive Work Copilot |
+| Public name | Executive Work Assistant |
 | Segment | Business / Professional |
 | Priority | Wave 1 anchor |
-| Recommended route | `/packages/executive-work-copilot` |
+| Recommended route | `/packages/executive-work-assistant` |
 | Primary delivery tier | Tier A; optional Tier B |
 | Primary buyer | Solo professionals, consultants, founders, managers, and general knowledge workers. |
 | Core job-to-be-done | Convert fragmented business inputs into usable professional output so daily work moves faster with less context switching. |
@@ -64,15 +64,15 @@ This document converts the Atlas Wave 1 portfolio recommendation into stable pac
 
 ---
 
-## Package card: Commercial Growth Copilot
+## Package card: Commercial Growth Assistant
 
 | Field | Value |
 |---|---|
 | Package ID | `PKG-BIZ-COMMERCIAL-GROWTH-COPILOT` |
-| Public name | Commercial Growth Copilot |
+| Public name | Commercial Growth Assistant |
 | Segment | Business / Professional |
 | Priority | Wave 1 anchor |
-| Recommended route | `/packages/commercial-growth-copilot` |
+| Recommended route | `/packages/commercial-growth-assistant` |
 | Primary delivery tier | Tier B; optional Tier C later |
 | Primary buyer | SMB owners, sales leads, consultants, agencies, and commercial teams. |
 | Core job-to-be-done | Turn rough commercial ideas, notes, and buyer context into client-facing growth material faster. |

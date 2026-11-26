@@ -6,6 +6,7 @@
   "scripts": {
     "validate:schemas": "node scripts/validate-schemas.mjs",
     "validate:csv": "node scripts/validate-csv.mjs",
-    "validate": "npm run validate:schemas && npm run validate:csv"
+    "validate": "npm run validate:schemas && npm run validate:csv && npm run validate:naming",
+    "validate:naming": "node scripts/validate-package-naming.mjs"
   }
 }

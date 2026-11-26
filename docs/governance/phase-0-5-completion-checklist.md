@@ -22,11 +22,14 @@ Finalize the Wave 1 Atlas package definitions so Phase 1 can build Wix package p
 ## Validation findings
 
 - Phase 0 is closed at repository level because PR #1 is merged.
-- Phase 0.5 now defines exactly five Wave 1 packages: Executive Work Copilot, Commercial Growth Copilot, Accounting & Bookkeeping Expert, Study Planner & Exam Coach, and Personal Life Organizer.
+- Phase 0.5 now defines exactly five Wave 1 packages: Executive Work Assistant, Commercial Growth Assistant, Accounting & Bookkeeping Expert, Study Planner & Exam Coach, and Personal Life Organizer.
 - Package identity, public route, primary buyer, JTBD, scope, exclusions, delivery tier, CTA, and Managed Secure Mode relevance are now defined for each Wave 1 package.
 - The Accounting & Bookkeeping Expert package is treated as a high-trust specialist package and requires compliance, validation, and human-review boundaries.
 - Managed Secure Mode is described only as future or optional because Azure and secure runtime work remain not started.
 - Phase 1 can now proceed to Wix page/CMS implementation using package definitions without reopening portfolio strategy.
+
+
+ATLASPROJECT-8 source migration is tracked through `docs/governance/naming-conventions.md` and the owning issue. Wix staging acceptance remains pending; this source update does not publish or modify Wix.
 
 ## Phase 1 prerequisites produced by Phase 0.5
 
