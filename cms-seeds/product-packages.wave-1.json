@@ -17,22 +17,8 @@
       "primaryBuyer": "Solo professionals, consultants, founders, managers, and general knowledge workers.",
       "jtbd": "Convert fragmented business inputs into usable professional output so daily work moves faster with less context switching.",
       "primaryOutcome": "Faster production of emails, meeting briefs, decision memos, action lists, short reports, and professional first drafts.",
-      "includedScope": [
-        "Email drafts",
-        "Meeting preparation",
-        "Summaries",
-        "Action extraction",
-        "Short memos",
-        "Decision briefs",
-        "Tone templates",
-        "Recurring workflow checklists"
-      ],
-      "exclusions": [
-        "No legal advice",
-        "No accounting or tax conclusions",
-        "No unsupported business claims",
-        "No autonomous external account actions"
-      ],
+      "includedScope": ["Email drafts", "Meeting preparation", "Summaries", "Action extraction", "Short memos", "Decision briefs", "Tone templates", "Recurring workflow checklists"],
+      "exclusions": ["No legal advice", "No accounting or tax conclusions", "No unsupported business claims", "No autonomous external account actions"],
       "ctaPrimary": "Request setup guidance",
       "managedSecureModeRelevance": "Optional later upgrade for clients wanting private internal knowledge or workspace-controlled templates.",
       "status": "validated-for-phase-0-5"
@@ -49,20 +35,8 @@
       "primaryBuyer": "SMB owners, sales leads, consultants, agencies, and commercial teams.",
       "jtbd": "Turn rough commercial ideas, notes, and buyer context into client-facing growth material faster.",
       "primaryOutcome": "Faster production of proposals, outreach drafts, positioning summaries, discovery guides, and follow-up material.",
-      "includedScope": [
-        "Proposal structures",
-        "Outreach sequences",
-        "Discovery questions",
-        "Competitor framing",
-        "Offer comparison tables",
-        "Sales follow-up drafts"
-      ],
-      "exclusions": [
-        "No live market-data guarantee",
-        "No legal review of commercial terms",
-        "No fabricated competitor claims",
-        "No fabricated pricing assertions"
-      ],
+      "includedScope": ["Proposal structures", "Outreach sequences", "Discovery questions", "Competitor framing", "Offer comparison tables", "Sales follow-up drafts"],
+      "exclusions": ["No live market-data guarantee", "No legal review of commercial terms", "No fabricated competitor claims", "No fabricated pricing assertions"],
       "ctaPrimary": "Build growth workflow",
       "managedSecureModeRelevance": "Later upgrade for CRM-connected or private-knowledge sales workflows.",
       "status": "validated-for-phase-0-5"
@@ -79,20 +53,8 @@
       "primaryBuyer": "Norwegian SMEs, founders, controllers, bookkeepers, and Conta users.",
       "jtbd": "Understand, execute, and validate bookkeeping and reporting tasks under Norwegian operating conditions with traceable calculations.",
       "primaryOutcome": "Better accounting workflow clarity, fewer bookkeeping mistakes, and stronger reconciliation discipline.",
-      "includedScope": [
-        "Norwegian bookkeeping guidance",
-        "VAT workflow explanation",
-        "Conta-oriented process guidance",
-        "Reconciliation methods",
-        "Calculation walkthroughs",
-        "Audit-ready checklist structure"
-      ],
-      "exclusions": [
-        "No substitute for licensed accountant or auditor",
-        "No tax evasion guidance",
-        "No guaranteed filing outcome",
-        "Statutory rates must be verified for the relevant period before reliance"
-      ],
+      "includedScope": ["Norwegian bookkeeping guidance", "VAT workflow explanation", "Conta-oriented process guidance", "Reconciliation methods", "Calculation walkthroughs", "Audit-ready checklist structure"],
+      "exclusions": ["No substitute for licensed accountant or auditor", "No tax evasion guidance", "No guaranteed filing outcome", "Statutory rates must be verified for the relevant period before reliance"],
       "ctaPrimary": "Request accounting setup review",
       "managedSecureModeRelevance": "Strong later candidate for protected file-grounded workflows, audit trails, and shared workspace deployment.",
       "status": "validated-for-phase-0-5"
@@ -109,20 +71,8 @@
       "primaryBuyer": "Secondary, upper-secondary, college, and university students.",
       "jtbd": "Convert exam pressure and fragmented material into a structured study plan with manageable execution steps.",
       "primaryOutcome": "Reduced study friction, better revision planning, and clearer week-by-week preparation.",
-      "includedScope": [
-        "Revision schedules",
-        "Weekly study plans",
-        "Exam countdown plans",
-        "Study session design",
-        "Prioritization",
-        "Reflection prompts",
-        "Progress review templates"
-      ],
-      "exclusions": [
-        "No guaranteed grades",
-        "No hidden answer generation",
-        "No academic-integrity bypass"
-      ],
+      "includedScope": ["Revision schedules", "Weekly study plans", "Exam countdown plans", "Study session design", "Prioritization", "Reflection prompts", "Progress review templates"],
+      "exclusions": ["No guaranteed grades", "No hidden answer generation", "No academic-integrity bypass"],
       "ctaPrimary": "Build study plan",
       "managedSecureModeRelevance": "Low priority; native package is sufficient for launch.",
       "status": "validated-for-phase-0-5"
@@ -139,23 +89,8 @@
       "primaryBuyer": "Adults managing busy schedules, household tasks, personal planning, and everyday decisions.",
       "jtbd": "Turn daily disorder into workable plans, routines, and checklists so life administration becomes less cognitively expensive.",
       "primaryOutcome": "Better everyday planning, simpler routines, clearer task sequencing, and reduced decision clutter.",
-      "includedScope": [
-        "Weekly planning",
-        "Task sequencing",
-        "Household lists",
-        "Event checklists",
-        "Travel preparation",
-        "Simple routines",
-        "Decision-support prompts"
-      ],
-      "exclusions": [
-        "No medical advice",
-        "No psychological advice",
-        "No financial advice",
-        "No legal advice",
-        "No autonomous account actions",
-        "No emergency support"
-      ],
+      "includedScope": ["Weekly planning", "Task sequencing", "Household lists", "Event checklists", "Travel preparation", "Simple routines", "Decision-support prompts"],
+      "exclusions": ["No medical advice", "No psychological advice", "No financial advice", "No legal advice", "No autonomous account actions", "No emergency support"],
       "ctaPrimary": "Organize my week",
       "managedSecureModeRelevance": "Low priority; native package is sufficient for launch.",
       "status": "validated-for-phase-0-5"
