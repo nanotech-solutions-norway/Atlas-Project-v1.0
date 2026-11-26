@@ -43,11 +43,11 @@ This register is the cross-platform control document for Atlas implementation. I
 | ATL-0007 | Gamma | Atlas Project folder | Gamma | 1 | Blocked | `docs/gamma/phase-1-gamma-reference-register.md`; folder ID `2pc6vh0les2sgcf` | Add exact Gamma URLs or IDs before Phase 1 closure. |
 | ATL-0008 | Azure | Secure control plane | Azure | 3 | Not started | User-confirmed not started | Create landing-zone ADR only when Phase 3 starts. |
 | ATL-0009 | Domeneshop | DNS to GitHub | Domeneshop | 1 | In progress | User-confirmed DNS connection | Manually verify records and HTTPS. |
-| ATL-0010 | Product | Wave 1 package definitions | GitHub / Wix | 0.5 | Validated | `docs/product/phase-0-5-wave-1-package-cards.md`; PR #2 merged | Reconcile package names against updated provider-brand naming policy. |
-| ATL-0011 | Wix CMS seed | ProductPackages collection seed | GitHub / Wix | 1 | Validated | `docs/wix/phase-1-wix-cms-validation-evidence.md`; 5 records inserted, 0 failures | Bind `ProductPackages` to package pages after naming review. |
+| ATL-0010 | Product | Wave 1 package definitions | GitHub / Wix | 0.5 | In progress | `docs/governance/naming-conventions.md` ATLASPROJECT-8 crosswalk; source PR pending review | Complete independent source review and owner staging acceptance; no public Wix publication in this scope. |
+| ATL-0011 | Wix CMS seed | ProductPackages collection seed | GitHub / Wix | 1 | In progress | `cms-seeds/product-packages.wave-1.json`; historical CMS readback in `docs/wix/phase-1-wix-cms-validation-evidence.md` | Reconcile Wix staging only after owner acceptance and separate authorization. |
 | ATL-0012 | Wix Forms / onboarding | Wave 1 onboarding field map | GitHub / Wix | 1 | Validated | `docs/wix/phase-1-wix-intake-form-evidence.md`; form ID `01dc5dc1-56d2-4ee6-8496-6700da326afb` | Place form on intake/onboarding page and link package CTAs. |
 | ATL-0013 | GitHub | Phase 0.5 completion checklist | GitHub | 0.5 | Validated | `docs/governance/phase-0-5-completion-checklist.md`; PR #2 merged | Closed. |
-| ATL-0014 | Wix | Wave 1 package page blueprint | Wix / GitHub | 1 | Validated | `docs/wix/phase-1-package-page-blueprint.md` | Implement/validate pages in Wix editor. |
+| ATL-0014 | Wix | Wave 1 package page blueprint | Wix / GitHub | 1 | In progress | `docs/wix/phase-1-package-page-blueprint.md`; ATLASPROJECT-8 source route crosswalk | Complete owner staging naming acceptance; no public Wix change in this scope. |
 | ATL-0015 | GitHub | ADR-0004 SEO/AEO/GEO governance | GitHub | 1 | In progress | `docs/adr/ADR-0004-atlas-ai-website-seo-aeo-geo-governance.md`; Issue #4 | Review and merge before Wix publication. |
 | ATL-0016 | GitHub | SEO/AEO/GEO registers | GitHub | 1 | In progress | `docs/seo/*`, `docs/website/*`, `docs/cms/schema.json`, `docs/claims/claims-registry.yml` | Validate and expand records during Wix page build. |
 | ATL-0017 | GitHub | Legal/trust disclosure drafts | GitHub | 1/6 | In progress | `docs/legal/provider-disclosure.md`; `docs/legal/ai-output-disclaimer.md` | Legal/commercial review required before public use. |
@@ -78,4 +78,4 @@ Phase 1 has started. The Wix CMS and form layers have been API-validated. Visual
 
 ## Current implementation warning
 
-Earlier package names and route names include vendor-adjacent terms such as `Copilot`. The updated SEO/AEO/GEO governance plan requires provider names to be explanatory platform lanes, not Atlas-owned product names. Rename/remediation must be handled through change control before final Wix publication.
+ATLASPROJECT-8 records the approved source-only migration and legacy crosswalk in `docs/governance/naming-conventions.md`. Keep provider names as explanatory platform lanes; owner staging acceptance and any Wix publication remain separate gates.

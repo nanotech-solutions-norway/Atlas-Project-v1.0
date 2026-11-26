@@ -23,8 +23,8 @@ Define the page structure, CMS bindings, CTA behavior, and validation controls f
 | Page | Route | Type | CMS dependency |
 |---|---|---|---|
 | Packages overview | `/packages` | Static or dynamic listing | `ProductPackages` |
-| Executive Work Copilot | `/packages/executive-work-copilot` | Dynamic detail page | `ProductPackages.slug = executive-work-copilot` |
-| Commercial Growth Copilot | `/packages/commercial-growth-copilot` | Dynamic detail page | `ProductPackages.slug = commercial-growth-copilot` |
+| Executive Work Assistant | `/packages/executive-work-assistant` | Dynamic detail page | `ProductPackages.slug = executive-work-assistant` |
+| Commercial Growth Assistant | `/packages/commercial-growth-assistant` | Dynamic detail page | `ProductPackages.slug = commercial-growth-assistant` |
 | Accounting & Bookkeeping Expert | `/packages/accounting-bookkeeping-expert` | Dynamic detail page | `ProductPackages.slug = accounting-bookkeeping-expert` |
 | Study Planner & Exam Coach | `/packages/study-planner-exam-coach` | Dynamic detail page | `ProductPackages.slug = study-planner-exam-coach` |
 | Personal Life Organizer | `/packages/personal-life-organizer` | Dynamic detail page | `ProductPackages.slug = personal-life-organizer` |

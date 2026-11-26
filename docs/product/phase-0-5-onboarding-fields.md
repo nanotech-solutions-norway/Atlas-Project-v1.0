@@ -27,7 +27,7 @@ This document defines the minimum structured intake fields required for Wave 1 p
 
 ## Package-specific fields
 
-### Executive Work Copilot
+### Executive Work Assistant
 
 | Field key | Label | Type | Required |
 |---|---|---|---|
@@ -37,7 +37,7 @@ This document defines the minimum structured intake fields required for Wave 1 p
 | `industryContext` | Industry context | text | no |
 | `templateNeeds` | Template needs | multi-select | no |
 
-### Commercial Growth Copilot
+### Commercial Growth Assistant
 
 | Field key | Label | Type | Required |
 |---|---|---|---|
@@ -87,7 +87,7 @@ This document defines the minimum structured intake fields required for Wave 1 p
 2. If package is Accounting & Bookkeeping Expert and files are expected, display a compliance and human-review notice.
 3. If package is Study Planner & Exam Coach, display academic integrity notice.
 4. If package is Personal Life Organizer, display regulated-advice boundary notice.
-5. If package is Commercial Growth Copilot, display claim-validation notice for customer-facing outputs.
+5. If package is Commercial Growth Assistant, display claim-validation notice for customer-facing outputs.
 6. If delivery preference is Managed Secure Mode, mark as future-state / consultation path until Phase 3 and Phase 4 are implemented.
 
 ## Privacy and compliance notes

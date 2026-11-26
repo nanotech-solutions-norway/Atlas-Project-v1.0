@@ -77,6 +77,18 @@ Suggested placeholder structure:
 
 A rename requires change-control entry if it affects a public URL, CMS collection, CMS field, schema path, package identifier, GitHub Pages route, future Azure contract, or onboarding form field.
 
+
+## Change control — ATLASPROJECT-8 (26.11.2026)
+
+Status: approved source migration; independent consistency review and owner Wix staging acceptance remain pending. This entry authorizes the neutral names and source routes in the table below. Public Wix changes are not included.
+
+| Historical display name | Current display name | Stable package ID (preserved) | Historical slug | Current slug and source route |
+|---|---|---|---|---|
+| Executive Work Copilot | Executive Work Assistant | `PKG-BIZ-EXEC-WORK-COPILOT` | `executive-work-copilot` | `executive-work-assistant` / `/packages/executive-work-assistant` |
+| Commercial Growth Copilot | Commercial Growth Assistant | `PKG-BIZ-COMMERCIAL-GROWTH-COPILOT` | `commercial-growth-copilot` | `commercial-growth-assistant` / `/packages/commercial-growth-assistant` |
+
+The package IDs remain unchanged; no rekeying, ID alias, or new identifier is introduced. Historical slugs are retained only in this crosswalk and the dated CMS evidence snapshot. No redirect, Wix route, or public record was configured. The other three Wave 1 package definitions and all existing pricing values are unchanged. Provider names remain explanatory platform lanes under `docs/legal/provider-disclosure.md` and `schemas/platform_deployment_enums.json`.
+
 ## Acceptance criteria
 
 This convention is active when new files follow the documented paths and Wix, Gamma, GitHub, Domeneshop, and future Azure items can be matched through the implementation register.

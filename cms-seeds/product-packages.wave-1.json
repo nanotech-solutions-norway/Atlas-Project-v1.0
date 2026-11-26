@@ -7,9 +7,9 @@
   "items": [
     {
       "packageId": "PKG-BIZ-EXEC-WORK-COPILOT",
-      "packageName": "Executive Work Copilot",
-      "slug": "executive-work-copilot",
-      "route": "/packages/executive-work-copilot",
+      "packageName": "Executive Work Assistant",
+      "slug": "executive-work-assistant",
+      "route": "/packages/executive-work-assistant",
       "segment": "Business / Professional",
       "wave": "Wave 1",
       "priorityRole": "Anchor product",
@@ -25,9 +25,9 @@
     },
     {
       "packageId": "PKG-BIZ-COMMERCIAL-GROWTH-COPILOT",
-      "packageName": "Commercial Growth Copilot",
-      "slug": "commercial-growth-copilot",
-      "route": "/packages/commercial-growth-copilot",
+      "packageName": "Commercial Growth Assistant",
+      "slug": "commercial-growth-assistant",
+      "route": "/packages/commercial-growth-assistant",
       "segment": "Business / Professional",
       "wave": "Wave 1",
       "priorityRole": "Anchor product",
